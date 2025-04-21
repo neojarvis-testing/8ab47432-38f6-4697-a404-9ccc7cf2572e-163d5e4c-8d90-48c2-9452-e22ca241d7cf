@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 
 public class SwarovskiHomePageLocators {
     public static By hoverOnAccessories  = By.cssSelector("#navAccessoriesLink");
-    //public static By hoverOnAccessories=By.xpath("(//span[text()='Accessories'])[1]");
     public static By clickOnSunglasses=By.cssSelector("#navAccessoriesSunglassesLink");
-    //public static By clickOnSunglasses=By.xpath("(//a[@id='navAccessoriesSunglassesLink'])[1]");
     //public static By clickOnMaterial=By.cssSelector("span[id='filter-dropdown-count-product_material']") ;
     public static By clickOnMaterial=By.xpath("//span[contains(text(),'Material')]");
     //public static By clickOnAcetate=By.cssSelector("#dropdown-facet-value-list-product_material > li:nth-child(0)");
@@ -19,7 +17,7 @@ public class SwarovskiHomePageLocators {
     public static By verifyLogin=By.xpath("(//span[contains(text(),'Login')])[1]");
     public static By hoverOnDecorations=By.cssSelector("#navDecorationslink2");
     public  static By clickOnBirds=By.cssSelector("#navDecorationsNatureBirdsLink");
-    
+
 
 
 

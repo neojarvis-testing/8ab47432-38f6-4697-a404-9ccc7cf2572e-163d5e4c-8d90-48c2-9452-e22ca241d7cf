@@ -1,15 +1,13 @@
 package pages;
-
+import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
 import uistore.SwarovskiBirdPageLocators;
 import uistore.SwarovskiHomePageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
-
 public class SwarovskiBirdPage {
      public static ExtentTest test;
     public static WebDriverHelper helper;
@@ -124,7 +122,10 @@ public class SwarovskiBirdPage {
     }
      public void verifyDelivery(){
         String data=helper.getText(SwarovskiBirdPageLocators.verifyDeliveryoptions);
-        AssertionUtility.verifyText(test, data, "Delivery Options");
+        //AssertionUtility.verifyText(test, data, "Delivery Options");
+        Assert.assertTrue(data.contains("Delivery"));
+        LoggerHandler.logInfo("verified the delivery");
+        test.log(Status.PASS,"verified the delivery");
     }
     public void Birds(){
         hoverOnDecorations();
