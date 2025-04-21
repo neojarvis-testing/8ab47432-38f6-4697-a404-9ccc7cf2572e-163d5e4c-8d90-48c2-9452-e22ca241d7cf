@@ -6,6 +6,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import uistore.SwarovskiHomePageLocators;
+import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Screenshot;
@@ -33,12 +34,10 @@ public class SwarovskiGiftsPage {
     public void verifyTitleText(){
         try {
             String str = Base.driver.getCurrentUrl();
-            Assert.assertTrue(str.contains("Categories"));
-            test.log(Status.PASS, "Page URL verified");
-            LoggerHandler.logInfo("Page URL verified");
+            AssertionUtility.verifyCondition(test, str, "Categories");
+
         } catch (AssertionError e) {
-            test.log(Status.FAIL, "Page URL Cannot be Verified");
-            LoggerHandler.logError("Page URL Cannot be verified");
+            System.out.println(e.getMessage());
         }
     }
     public void clickOnCtaegories(){
@@ -112,12 +111,9 @@ public class SwarovskiGiftsPage {
     public void verify(){
         try {
             String str = helper.getText(SwarovskiHomePageLocators.addToCartText);
-            Assert.assertEquals(str, "Add to bag");
-            test.log(Status.PASS, "Add To Bag Text Verified");
-            LoggerHandler.logInfo("Add to bag text verified");
+            AssertionUtility.verifyText(test, str, "Add to bag");
         } catch (AssertionError e) {
-            test.log(Status.FAIL, "Add To Bag Text Cannot be Verified");
-            LoggerHandler.logError("Add to bag text Cannot be verified");
+            System.out.println(e.getMessage());
         }
     }
     

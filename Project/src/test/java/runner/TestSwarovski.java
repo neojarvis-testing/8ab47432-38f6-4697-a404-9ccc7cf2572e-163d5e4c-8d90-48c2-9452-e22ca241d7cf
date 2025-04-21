@@ -12,15 +12,16 @@ import pages.SwarovskiDiamondsPage;
 import pages.SwarovskiGiftsPage;
 import utils.Base;
 
-public class TestSwarovski extends Base{
+public class TestSwarovski extends Base {
     public static ExtentTest test;
     public static ExtentReports report;
     @BeforeMethod
     public void open(){
         openBrowser();
     }
-    // @Test
+     @Test
     public void testCase5(){
+        test=report.createTest("Test Case 5");
         SwarovskiGiftsPage giftsPage = new SwarovskiGiftsPage(test);
         giftsPage.testSwarovskiGiftsPage();
     }
