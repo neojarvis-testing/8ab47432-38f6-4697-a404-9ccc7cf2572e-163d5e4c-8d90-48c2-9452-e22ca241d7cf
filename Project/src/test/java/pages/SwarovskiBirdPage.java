@@ -16,6 +16,13 @@ public class SwarovskiBirdPage {
         this.test=test;
         helper=new WebDriverHelper(Base.driver);
     }
+    /*
+     * a.Method Name: hoverOnDecorations.
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to hover On Decorations.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
     public void hoverOnDecorations(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.hoverOnDecorations, 10);
@@ -27,9 +34,15 @@ public class SwarovskiBirdPage {
             e.printStackTrace();
             LoggerHandler.logError(" not hover on  Decorations");
             test.log(Status.FAIL,"not hover on Decorations");
-        }
-        
+        }   
     }
+     /*
+     * a.Method Name:clickOnBirds
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On Birds.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
     public void clickOnBirds(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnBirds, 10);
@@ -43,6 +56,14 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click On Birds");
         }
     }
+    /*
+     * a.Method Name:click On Material.
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On Material.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
+    
     public void clickOnMaterial(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnMaterial, 10);
@@ -56,6 +77,13 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click On Material");
         }
     }
+    /*
+     * a.Method Name:clickOnMetal
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On Metal.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
     public void clickOnMetal(){
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnMetal, 10);
@@ -69,6 +97,13 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click On Metal");
         }
     }
+    /*
+     * a.Method Name:clickOnResults
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On Results.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
     public void clickOnResults(){
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnResults, 10);
@@ -82,6 +117,13 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click OnclickOnBirds");
         }
     }
+    /*
+     * a.Method Name:click On FirstProduct
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On Product.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
     public void clickOnFirstProduct(){
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnFirstProduct, 10);
@@ -95,6 +137,13 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click On FirstProduct");
         }
     }
+    /*
+     * a.Method Name:clickOnFindInStore
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On Find IN STORE.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
     public void clickOnFindInStore(){
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnFindinstore, 10);
@@ -108,6 +157,14 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click  FindInstores");
         }
     }
+    /*
+     * a.Method Name:clickOn ClickAvailbility
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to click On ClickAvailbility.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
+    
     public void clickOnClickAvailbility(){
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnAvailability, 10);
@@ -123,6 +180,14 @@ public class SwarovskiBirdPage {
             test.log(Status.FAIL,"not click OnclickOnBirds");
         }
     }
+     /*
+     * a.Method Name:verifyDelivery
+     * b.Author Name: Poojitha Sudini
+     * c.Description: This method  is used to verify the text.
+     * d.Parameters:NA.
+     * e.Return Type:NULL.
+     */
+    
      public void verifyDelivery(){
         String data=helper.getText(SwarovskiBirdPageLocators.verifyDeliveryoptions);
         //AssertionUtility.verifyText(test, data, "Delivery Options");
