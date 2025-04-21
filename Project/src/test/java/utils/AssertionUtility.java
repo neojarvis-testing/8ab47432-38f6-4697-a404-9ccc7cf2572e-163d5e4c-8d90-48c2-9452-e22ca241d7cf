@@ -18,10 +18,10 @@ public class AssertionUtility {
         try {
             Assert.assertEquals(actual, expected);
             test.log(Status.PASS, "Verified: "+expected);
-            LoggerHandler.info("Verified: "+expected);
+            LoggerHandler.logInfo("Verified: "+expected);
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Can not Verify: "+expected);
-            LoggerHandler.error("Verified: "+expected);
+            LoggerHandler.logError("Verified: "+expected);
         }
 
     }
@@ -37,10 +37,10 @@ public class AssertionUtility {
         try {
             Assert.assertTrue(actual.contains(containsPart));
             test.log(Status.PASS, "Verified that the text contains: "+containsPart);
-            LoggerHandler.info("Verified that the text contains: "+containsPart);
+            LoggerHandler.logInfo("Verified that the text contains: "+containsPart);
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Can not Verify that the text contains: "+containsPart);
-            LoggerHandler.error("Can not Verify that the text contains: "+containsPart);
+            LoggerHandler.logError("Can not Verify that the text contains: "+containsPart);
         }
     }
 
