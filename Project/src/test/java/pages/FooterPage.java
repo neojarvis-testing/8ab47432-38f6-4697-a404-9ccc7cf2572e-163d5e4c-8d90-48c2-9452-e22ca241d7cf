@@ -31,6 +31,7 @@ public class FooterPage {
     public void clickOnTermsOfUse()
     {
         try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnTermsOfUse);
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnTermsOfUse, 10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnTermsOfUse);
             test.log(Status.PASS,"Clicked on TermsOfUse");
@@ -54,6 +55,7 @@ public class FooterPage {
     public void clickOnTermsAndConditions()
     {
         try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnTermsAndConditions);
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnTermsAndConditions, 10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnTermsAndConditions);
             test.log(Status.PASS,"navigate back to home page");
@@ -77,6 +79,7 @@ public class FooterPage {
     public void clickOnPrivacyPolicy()
     {
         try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnPrivacyPolicy);
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnPrivacyPolicy, 10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnPrivacyPolicy);
             test.log(Status.PASS,"Clicked on PrivacyPolicy ");
@@ -97,7 +100,31 @@ public class FooterPage {
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-dataprotection/");
         helper.navigateBack();
     }
-    
+    public void clickOnImprint()
+    {
+        try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnImprint);
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnImprint, 10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnImprint);
+            test.log(Status.PASS,"Clicked on Imprint ");
+            LoggerHandler.logInfo("Clicked on Imprint");
+        } catch (Exception e) {
+            test.log(Status.FAIL,"Unable to Click on Imprint ");
+            LoggerHandler.logError("Unable to Click on Imprint ");
+        }  
+    }
+    public void verifyimprintTitle()
+    {
+        String str=Base.driver.getTitle();
+        AssertionUtility.verifyCondition(test, str, "Imprint");
+    }
+    public void verifyimprintUrl()
+    {
+        String str = Base.driver.getCurrentUrl();
+        AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-imprint/Imprint/");
+        helper.navigateBack();
+    }
+
 
 
     public void testcase2()
@@ -112,6 +139,11 @@ public class FooterPage {
         clickOnPrivacyPolicy();
         verifyPrivacyPolicyTitle();
         verifyPrivacyPolicyUrl();
+        clickOnImprint();
+        verifyimprintTitle();
+        verifyimprintUrl();
+
+
 
 
 
