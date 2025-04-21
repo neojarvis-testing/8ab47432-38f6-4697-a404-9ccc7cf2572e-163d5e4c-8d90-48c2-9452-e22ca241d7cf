@@ -7,6 +7,7 @@ import uistore.SwarovskiHomePageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 public class SwarovskiBirdPage {
      public static ExtentTest test;
@@ -113,6 +114,8 @@ public class SwarovskiBirdPage {
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnAvailability);
             LoggerHandler.logInfo("click On Resuuts");
             test.log(Status.PASS, "click On Results");
+            Screenshot.captureScreenShot("clickeResult");
+
         }
         catch(Exception e){
             e.printStackTrace();
