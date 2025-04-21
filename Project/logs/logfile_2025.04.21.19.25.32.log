@@ -1,0 +1,22 @@
+2025-04-21 19:25:32,657 INFO  - scroll to About Swarovski
+2025-04-21 19:25:34,617 INFO  - Clicked on About Swarovski
+2025-04-21 19:25:34,642 INFO  - Verified: About Swarovski | Swarovski US
+2025-04-21 19:25:34,652 INFO  - Verified: https://www.swarovski.com/en-US/s-brand/
+2025-04-21 19:25:39,257 INFO  - Clicked on Sustainability
+2025-04-21 19:25:39,325 ERROR - Verified: Sustainability and Corporate Responsibility  | Swarovski US
+2025-04-21 19:25:39,337 INFO  - Verified: https://www.swarovski.com/en-US/s-sustainability/
+2025-04-21 19:25:43,405 INFO  - Clicked on JobsAndCareer
+2025-04-21 19:25:43,418 INFO  - Verified: Career at Swarovski | Job opportunies | Swarovski US
+2025-04-21 19:25:43,438 INFO  - Verified: https://www.swarovski.com/en-US/s-careers/
+2025-04-21 19:25:46,757 INFO  - Clicked on AlumniCommunity
+2025-04-21 19:25:46,768 ERROR - Verified: Landing Page - Swarovski
+2025-04-21 19:25:46,804 ERROR - Verified: https://alumni.swarovski.com/alumni/
+2025-04-21 19:25:51,986 ERROR - Unable to Click on Corporategifts
+2025-04-21 19:25:51,997 ERROR - Verified: <title>Swarovski Corporate Gifts &amp; Business Gifts | Swarovski US</title>
+2025-04-21 19:25:52,005 ERROR - Verified: https://www.swarovski.com/en-US/s-corporate-gifts/
+2025-04-21 19:25:57,046 ERROR - Unable to Click on ForProfessional
+2025-04-21 19:25:57,054 ERROR - Verified: <title>Swarovski for Professionals | Swarovski US</title>
+2025-04-21 19:25:57,062 ERROR - Verified: https://www.swarovski.com/en-US/s-professionals/
+2025-04-21 19:26:02,100 ERROR - Unable to Click on ForProfessional
+2025-04-21 19:26:02,109 ERROR - Verified: <title>Swarovski for Professionals | Swarovski US</title>
+2025-04-21 19:26:02,117 ERROR - Verified: https://www.swarovski.com/en-US/s-professionals/

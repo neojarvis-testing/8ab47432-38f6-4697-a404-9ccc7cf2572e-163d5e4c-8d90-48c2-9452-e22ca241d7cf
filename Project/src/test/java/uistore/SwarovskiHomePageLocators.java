@@ -15,5 +15,5 @@ public class SwarovskiHomePageLocators {
     public static By clickOnTermsOfUse=By.xpath("(//span[text()='Terms Of Use'])[1]");
     public static By clickOnTermsAndConditions=By.xpath("(//span[text()='Terms & Conditions'])[1]");
     public static By clickOnPrivacyPolicy=By.xpath("(//span[text()='Privacy Policy'])[1]");
-    public static By clickOn
+    
 }
