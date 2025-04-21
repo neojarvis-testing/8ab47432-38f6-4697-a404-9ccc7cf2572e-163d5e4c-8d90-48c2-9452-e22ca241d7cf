@@ -1,0 +1,44 @@
+2025-04-21 22:53:01,153 INFO  - Clicked on Search Icon
+2025-04-21 22:53:02,388 INFO  - click on Search Bar
+2025-04-21 22:53:03,139 INFO  - Sentdata to searchBar as Earrings
+2025-04-21 22:53:05,901 INFO  - clicked enter for resultant page
+2025-04-21 22:53:06,159 INFO  - Clicked on Material
+2025-04-21 22:53:06,550 INFO  - Clicked on Gemstore
+2025-04-21 22:53:08,888 INFO  - Clicked on Zircoina
+2025-04-21 22:53:11,586 INFO  - Clicked on Showproduct
+2025-04-21 22:53:14,058 INFO  - Clicked on Firstproduct
+2025-04-21 22:53:14,885 INFO  - Clicked on BookAppointment
+2025-04-21 22:53:14,988 INFO  - Verified text Description
+2025-04-21 22:53:21,655 INFO  - Scrolled down and clicked on CustomerServiceOverview
+2025-04-21 22:53:21,683 INFO  - Verified CustomerServiceOverview URl
+2025-04-21 22:53:21,759 INFO  - Verify CustomerServiceOverview title
+2025-04-21 22:53:23,708 INFO  - Navigated to back page
+2025-04-21 22:53:25,641 INFO  - Clicked on OrderStatus
+2025-04-21 22:53:25,675 INFO  - verified OrderStatus URL
+2025-04-21 22:53:25,686 INFO  - verifed OrderStatus Title
+2025-04-21 22:53:27,641 INFO  - Navigated to back page
+2025-04-21 22:53:29,582 INFO  - Clicked on GiftCardBalance
+2025-04-21 22:53:29,609 INFO  - verified GiftCardBalance URL
+2025-04-21 22:53:29,643 INFO  - verified GiftCardBalance Title
+2025-04-21 22:53:31,803 INFO  - Navigated to back page
+2025-04-21 22:53:33,375 INFO  - Clicked on shipping
+2025-04-21 22:53:33,395 INFO  - verified Shipping URL
+2025-04-21 22:53:33,543 INFO  - verified Shipping Title
+2025-04-21 22:53:35,454 INFO  - Navigated to back page
+2025-04-21 22:53:37,254 INFO  - clicked On ReturnsAndExchange
+2025-04-21 22:53:37,287 INFO  - verified ReturnsAndExchange URL
+2025-04-21 22:53:37,359 INFO  - verify ReturnsAndExchange Title
+2025-04-21 22:53:39,393 INFO  - Navigated to back page
+2025-04-21 22:53:41,326 INFO  - clicked on ContactUs
+2025-04-21 22:53:41,347 INFO  - verified ContactUs URL
+2025-04-21 22:53:41,354 INFO  - verified ContactUs Title
+2025-04-21 22:53:43,504 INFO  - Navigated to back page
+2025-04-21 22:53:45,417 INFO  - clicked on SizeGuide
+2025-04-21 22:53:45,474 INFO  - verified SizeGuide URL
+2025-04-21 22:53:45,480 INFO  - verified SizeGuide Title
+2025-04-21 22:53:47,391 INFO  - Navigated to back page
+2025-04-21 22:53:49,267 INFO  - clicked on StoreFinder
+2025-04-21 22:53:49,292 INFO  - verified StoreFinder URL
+2025-04-21 22:53:49,388 INFO  - verified StoreFinder Title
+2025-04-21 22:53:51,468 INFO  - Navigated to back page
+2025-04-21 22:53:51,861 INFO  - Verified text Membership

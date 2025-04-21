@@ -1,0 +1,33 @@
+2025-04-21 22:41:05,500 INFO  - Scrolled down and clicked on CustomerServiceOverview
+2025-04-21 22:41:05,555 INFO  - Verified CustomerServiceOverview URl
+2025-04-21 22:41:05,566 INFO  - Verify CustomerServiceOverview title
+2025-04-21 22:41:07,589 INFO  - Navigated to back page
+2025-04-21 22:41:09,911 INFO  - Clicked on OrderStatus
+2025-04-21 22:41:09,955 INFO  - verified OrderStatus URL
+2025-04-21 22:41:10,043 INFO  - verifed OrderStatus Title
+2025-04-21 22:41:11,639 INFO  - Navigated to back page
+2025-04-21 22:41:13,839 INFO  - Clicked on GiftCardBalance
+2025-04-21 22:41:13,855 INFO  - verified GiftCardBalance URL
+2025-04-21 22:41:13,868 INFO  - verified GiftCardBalance Title
+2025-04-21 22:41:15,859 INFO  - Navigated to back page
+2025-04-21 22:41:17,613 INFO  - Clicked on shipping
+2025-04-21 22:41:17,650 INFO  - verified Shipping URL
+2025-04-21 22:41:17,664 INFO  - verified Shipping Title
+2025-04-21 22:41:19,575 INFO  - Navigated to back page
+2025-04-21 22:41:21,366 INFO  - clicked On ReturnsAndExchange
+2025-04-21 22:41:21,384 INFO  - verified ReturnsAndExchange URL
+2025-04-21 22:41:21,396 INFO  - verify ReturnsAndExchange Title
+2025-04-21 22:41:23,346 INFO  - Navigated to back page
+2025-04-21 22:41:25,350 INFO  - clicked on ContactUs
+2025-04-21 22:41:25,364 INFO  - verified ContactUs URL
+2025-04-21 22:41:25,370 INFO  - verified ContactUs Title
+2025-04-21 22:41:27,169 INFO  - Navigated to back page
+2025-04-21 22:41:29,037 INFO  - clicked on SizeGuide
+2025-04-21 22:41:29,048 INFO  - verified SizeGuide URL
+2025-04-21 22:41:29,067 INFO  - verified SizeGuide Title
+2025-04-21 22:41:31,186 INFO  - Navigated to back page
+2025-04-21 22:41:33,164 INFO  - clicked on StoreFinder
+2025-04-21 22:41:33,237 INFO  - verified StoreFinder URL
+2025-04-21 22:41:33,289 INFO  - verified StoreFinder Title
+2025-04-21 22:41:35,342 INFO  - Navigated to back page
+2025-04-21 22:41:35,672 INFO  - Verified text Membership

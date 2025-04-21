@@ -25,7 +25,7 @@ ExtentReports report;
         test=report.createTest("testcase7");
         openBrowser();
     }
-// @Test
+@Test
 public void test7(){
     EarringsHomePage ehp = new EarringsHomePage(test);
     ehp.testcase7();
