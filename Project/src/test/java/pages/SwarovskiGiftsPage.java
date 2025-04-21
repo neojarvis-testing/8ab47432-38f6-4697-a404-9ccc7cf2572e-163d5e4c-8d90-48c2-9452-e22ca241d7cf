@@ -8,6 +8,7 @@ import com.aventstack.extentreports.Status;
 import uistore.SwarovskiHomePageLocators;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SwarovskiGiftsPage {
@@ -133,6 +134,7 @@ public class SwarovskiGiftsPage {
         clickOnShowAll();
         clickOnFirstProduct();
         verify();
+        Screenshot.captureScreenShot("Gifts");
     }
 
 

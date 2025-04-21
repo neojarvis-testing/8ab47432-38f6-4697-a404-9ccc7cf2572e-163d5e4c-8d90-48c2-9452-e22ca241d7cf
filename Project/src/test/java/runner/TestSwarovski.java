@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import pages.SwarovskiDiamondsPage;
 import pages.SwarovskiGiftsPage;
 import utils.Base;
 
@@ -18,10 +19,15 @@ public class TestSwarovski extends Base{
     public void open(){
         openBrowser();
     }
-    @Test
-    public void testCase1(){
+    // @Test
+    public void testCase5(){
         SwarovskiGiftsPage giftsPage = new SwarovskiGiftsPage(test);
         giftsPage.testSwarovskiGiftsPage();
+    }
+    @Test
+    public void testCase6(){
+        SwarovskiDiamondsPage diamondPage = new SwarovskiDiamondsPage(test);
+        diamondPage.testSwarovskiDiamondPage();
     }
     @AfterMethod
     public void close(){
