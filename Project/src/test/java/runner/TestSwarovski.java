@@ -6,7 +6,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import pages.SwarovskiHomePage;
+
+import pages.SwarovskiBirdPage;
+import pages.SwarovskiSunglassesPage;
 import utils.Base;
 import utils.Reporter;
 public class TestSwarovski extends Base {
@@ -22,10 +24,16 @@ public class TestSwarovski extends Base {
     }
     @Test
     public void test1(){
-    test=report.createTest("test1");
-    SwarovskiHomePage s=new SwarovskiHomePage(test);
+    test=report.createTest("Sunglasses");
+    SwarovskiSunglassesPage s=new SwarovskiSunglassesPage(test);
     s.testcase3();
-    }    
+    }  
+    @Test
+    public void test2(){
+        test=report.createTest("Birds");
+        SwarovskiBirdPage sd=new SwarovskiBirdPage(test);
+        sd.Birds();
+    }  
     @AfterMethod
     public void close(){
         driver.quit();

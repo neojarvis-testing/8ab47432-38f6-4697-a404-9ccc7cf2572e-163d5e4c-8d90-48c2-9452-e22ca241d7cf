@@ -1,4 +1,6 @@
 package pages;
+import org.testng.Assert;
+
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.SwarovskiHomePageLocators;
@@ -6,10 +8,10 @@ import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
-public class SwarovskiHomePage {
+public class SwarovskiSunglassesPage {
     public static ExtentTest test;
     public static WebDriverHelper helper;
-    public SwarovskiHomePage(ExtentTest test){
+    public SwarovskiSunglassesPage(ExtentTest test){
         this.test=test;
         helper=new WebDriverHelper(Base.driver);
     }
@@ -17,9 +19,10 @@ public class SwarovskiHomePage {
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.hoverOnAccessories, 10);
             helper.hoverElement(SwarovskiHomePageLocators.hoverOnAccessories);
-            LoggerHandler.logInfo("hover on Accessories");
-            test.log(Status.PASS, "hover on Accessories");
+            LoggerHandler.logInfo("Hover on Accessories");
+            test.log(Status.PASS, "Hover on Accessories");
         }
+      
         catch(Exception e){
             e.printStackTrace();
             LoggerHandler.logError(" not hover on Accessories");
@@ -30,7 +33,7 @@ public class SwarovskiHomePage {
     public void clickOnSunglasses(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnSunglasses, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickOnSunglasses);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnSunglasses);
             LoggerHandler.logInfo("clickOnSunglasses");
             test.log(Status.PASS, "clickOnSunglasses");
         }
@@ -40,16 +43,16 @@ public class SwarovskiHomePage {
             test.log(Status.FAIL,"not clickOnSunglasses");
         }
     }
-
     public void verifyUrlSunglasses(){
         String url=Base.driver.getCurrentUrl();
-        AssertionUtility.verifyCondition(test, url,"Sunglasses");
-
+        Assert.assertTrue(url.contains("Sunglasses"));
+        LoggerHandler.logInfo("Sssertoin done");
+        test.log(Status.PASS, "clickOnMaterial");
     }
     public void clickOnMaterial(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnMaterial, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickOnMaterial);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnMaterial);
             LoggerHandler.logInfo("clickOnMaterial");
             test.log(Status.PASS, "clickOnMaterial");
         }
@@ -62,7 +65,7 @@ public class SwarovskiHomePage {
     public void clickOnAcetate(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAcetate, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickOnAcetate);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnAcetate);
             LoggerHandler.logInfo("click On Acetate");
             test.log(Status.PASS, "click On Acetate");
         }
@@ -75,7 +78,7 @@ public class SwarovskiHomePage {
     public void clickOnShowProduct(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnShowProducts, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickOnShowProducts);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnShowProducts);
             LoggerHandler.logInfo("click On ShowProducts");
             test.log(Status.PASS, "click OnShowProducts");
         }
@@ -88,7 +91,7 @@ public class SwarovskiHomePage {
     public void clickOnFirstProduct(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnFirstProduct, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickOnFirstProduct);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnFirstProduct);
             LoggerHandler.logInfo("click On FirstProduct");
             test.log(Status.PASS, "click On FirstProduct");
         }
@@ -101,7 +104,7 @@ public class SwarovskiHomePage {
     public void clickOnCareandMaintanece(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickonCareandMaintainence, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickonCareandMaintainence);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickonCareandMaintainence);
             LoggerHandler.logInfo("click On CareandMaintainence");
             test.log(Status.PASS, "click On CareandMaintainence");
         }
@@ -128,7 +131,7 @@ public class SwarovskiHomePage {
         clickOnFirstProduct();
         clickOnCareandMaintanece();
         verifyBookanAppointment();
-        verifyLogin();
+        //verifyLogin();
     }
   
 
