@@ -53,5 +53,24 @@ public class ExcelReader {
 
         return null;
     }
+    public static String readExcelData(String path,String name, int rows, int cols) {
+		try {
+			 file=new FileInputStream(path);
+	            workbook=new XSSFWorkbook(file);
+	            sheet=workbook.getSheet(name);
+	            row=sheet.getRow(rows);
+	            cell=row.getCell(cols);
+	            
+	            String value = cell.toString();
+	            return value;
+
+		} catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+		}
+		catch (IOException e) {
+            System.out.println(e.getMessage());
+		}
+		return null;
+	}
 
 }
