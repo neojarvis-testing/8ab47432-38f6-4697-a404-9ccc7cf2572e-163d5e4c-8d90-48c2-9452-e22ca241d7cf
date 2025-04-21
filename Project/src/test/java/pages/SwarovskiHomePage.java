@@ -125,6 +125,10 @@ public class SwarovskiHomePage {
         verifyUrlSunglasses();
         clickOnMaterial();
         clickOnAcetate();
+        clickOnFirstProduct();
+        clickOnCareandMaintanece();
+        verifyBookanAppointment();
+        verifyLogin();
     }
   
 
