@@ -23,27 +23,65 @@ public class LoggerHandler {
             logger.error("Fail to genreate logs", e);
         }
     }
-    public static void trace(String message) {
+
+    /*
+     * a.Method Name: logTrace.
+     * b.Author Name: Md Safiur Rahaman
+     * c.Description: This method  is used to log Trace.
+     * d.Parameters: String message
+     * e.Return Type: void
+     */
+    public static void logTrace(String message) {
         logger.trace(message);
     }
-
-    public static void debug(String message) {
+    /*
+     * a.Method Name: logDebug.
+     * b.Author Name: Md Safiur Rahaman
+     * c.Description: This method  is used to log Debug.
+     * d.Parameters: String message
+     * e.Return Type: void
+     */
+    public static void logDebug(String message) {
         logger.debug(message);
     }
-
-    public static void info(String message) {
+    /*
+     * a.Method Name: logInfo.
+     * b.Author Name: Md Safiur Rahaman
+     * c.Description: This method  is used to log Info.
+     * d.Parameters: String message
+     * e.Return Type: void
+     */
+    public static void logInfo(String message) {
         logger.info(message);
     }
-
-    public static void warn(String message) {
+    /*
+     * a.Method Name: logWarn.
+     * b.Author Name: Md Safiur Rahaman
+     * c.Description: This method  is used to log Warn.
+     * d.Parameters: String message
+     * e.Return Type: void
+     */
+    public static void logWarn(String message) {
         logger.warn(message);
     }
-
-    public static void error(String message) {
+    /*
+     * a.Method Name: logError.
+     * b.Author Name: Md Safiur Rahaman
+     * c.Description: This method  is used to log Error.
+     * d.Parameters: String message
+     * e.Return Type: void
+     */
+    public static void logError(String message) {
         logger.error(message);
     }
-
-    public static void fatal(String message) {
+    /*
+     * a.Method Name: logFatal.
+     * b.Author Name: Md Safiur Rahaman
+     * c.Description: This method  is used to log Fatal.
+     * d.Parameters: String message
+     * e.Return Type: void
+     */
+    public static void logFatal(String message) {
         logger.fatal(message);
     }
 
