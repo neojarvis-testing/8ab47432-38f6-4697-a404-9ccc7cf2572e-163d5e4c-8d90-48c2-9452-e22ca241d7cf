@@ -1,0 +1,12 @@
+2025-04-21 18:43:47,218 INFO  - Hover Over Jwelleries
+2025-04-21 18:44:21,200 INFO  - Click on Pendants
+2025-04-21 18:44:21,229 INFO  - Verified that the text contains: Pendants
+2025-04-21 18:44:22,814 INFO  - Click on Meterial
+2025-04-21 18:44:23,246 INFO  - Click on Crystal
+2025-04-21 18:44:25,541 INFO  - Click on ShowProduct
+2025-04-21 18:44:25,930 INFO  - Click on Color
+2025-04-21 18:44:26,519 INFO  - Click on White
+2025-04-21 18:44:59,723 INFO  - Click on ShowProduct based on color
+2025-04-21 18:45:00,238 INFO  - Click on FirstProduct
+2025-04-21 18:45:00,362 INFO  - Verified: Find in store
+2025-04-21 18:45:01,742 INFO  - Click on AddToBag
