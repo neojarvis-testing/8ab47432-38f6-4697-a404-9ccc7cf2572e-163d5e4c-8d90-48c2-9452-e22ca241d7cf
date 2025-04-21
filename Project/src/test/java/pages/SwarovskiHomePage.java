@@ -29,6 +29,17 @@ public class SwarovskiHomePage {
         test.log(Status.INFO, "Click on Wedding Gifts");
         LoggerHandler.logInfo("Click on Wedding Gifts");
     }
+    public void verifyTitleText(){
+        try {
+            String str = Base.driver.getCurrentUrl();
+            Assert.assertTrue(str.contains("Categories"));
+            test.log(Status.PASS, "Page URL verified");
+            LoggerHandler.logInfo("Page URL verified");
+        } catch (AssertionError e) {
+            test.log(Status.FAIL, "Page URL Cannot be Verified");
+            LoggerHandler.logError("Page URL Cannot be verified");
+        }
+    }
     public void clickOnCtaegories(){
         helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCategories,10);
         helper.clickOnElement(SwarovskiHomePageLocators.clickOnCategories);
@@ -112,6 +123,7 @@ public class SwarovskiHomePage {
     public void testSwarovskiGiftsPage(){
         hoverOverGifts();
         clickOnWeddingGifts();
+        verifyTitleText();
         clickOnCtaegories();
         clickOnWatches();
         clickOnAllWatches();
