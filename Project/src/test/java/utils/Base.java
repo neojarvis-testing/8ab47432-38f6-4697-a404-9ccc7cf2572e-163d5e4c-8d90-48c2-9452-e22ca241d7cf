@@ -17,7 +17,7 @@ import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 
 public class Base {
-
+    
     public static WebDriver driver;
     public static FileInputStream file;
     public static Properties prop;
