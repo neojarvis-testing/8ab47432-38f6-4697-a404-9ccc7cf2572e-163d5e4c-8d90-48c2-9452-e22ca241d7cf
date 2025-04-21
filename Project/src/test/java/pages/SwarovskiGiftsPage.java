@@ -10,10 +10,10 @@ import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
-public class SwarovskiHomePage {
+public class SwarovskiGiftsPage {
     public static WebDriverHelper helper;
     public static ExtentTest test;
-    public SwarovskiHomePage(){
+    public SwarovskiGiftsPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
     }
