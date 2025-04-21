@@ -48,16 +48,86 @@ public class SwarovskiHomePage {
     }
     public void clickOnMaterial(){
         try{
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnSunglasses, 10);
-            helper.hoverElement(SwarovskiHomePageLocators.clickOnSunglasses);
-            LoggerHandler.logInfo("clickOnSunglasses");
-            test.log(Status.PASS, "clickOnSunglasses");
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnMaterial, 10);
+            helper.hoverElement(SwarovskiHomePageLocators.clickOnMaterial);
+            LoggerHandler.logInfo("clickOnMaterial");
+            test.log(Status.PASS, "clickOnMaterial");
         }
         catch(Exception e){
             e.printStackTrace();
-            LoggerHandler.logError(" not clickOnSunglasses");
-            test.log(Status.FAIL,"not clickOnSunglasses");
+            LoggerHandler.logError(" not click On Material");
+            test.log(Status.FAIL,"not click On Material");
         }
     }
+    public void clickOnAcetate(){
+        try{
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAcetate, 10);
+            helper.hoverElement(SwarovskiHomePageLocators.clickOnAcetate);
+            LoggerHandler.logInfo("click On Acetate");
+            test.log(Status.PASS, "click On Acetate");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            LoggerHandler.logError(" not click On Acetate");
+            test.log(Status.FAIL,"not click On Acetate");
+        }
+    }
+    public void clickOnShowProduct(){
+        try{
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnShowProducts, 10);
+            helper.hoverElement(SwarovskiHomePageLocators.clickOnShowProducts);
+            LoggerHandler.logInfo("click On ShowProducts");
+            test.log(Status.PASS, "click OnShowProducts");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            LoggerHandler.logError(" not click On ShowProducts");
+            test.log(Status.FAIL,"not click On ShowProducts");
+        }
+    }
+    public void clickOnFirstProduct(){
+        try{
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnFirstProduct, 10);
+            helper.hoverElement(SwarovskiHomePageLocators.clickOnFirstProduct);
+            LoggerHandler.logInfo("click On FirstProduct");
+            test.log(Status.PASS, "click On FirstProduct");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            LoggerHandler.logError(" not click On FirstProduct");
+            test.log(Status.FAIL,"not click On FirstProduct");
+        }
+    }
+    public void clickOnCareandMaintanece(){
+        try{
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickonCareandMaintainence, 10);
+            helper.hoverElement(SwarovskiHomePageLocators.clickonCareandMaintainence);
+            LoggerHandler.logInfo("click On CareandMaintainence");
+            test.log(Status.PASS, "click On CareandMaintainence");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            LoggerHandler.logError(" not click On FirstProduct");
+            test.log(Status.FAIL,"not click On FirstProduct");
+        }
+    }
+    public void verifyBookanAppointment(){
+        String data=helper.getText(SwarovskiHomePageLocators.bookAnAppointmnet);
+        AssertionUtility.verifyText(test, data,"Book an appointment");
+    }
+    public void verifyLogin(){
+        String data=helper.getText(SwarovskiHomePageLocators.verifyLogin);
+        AssertionUtility.verifyText(test, data, "Login");
+    }
+    public void testcase3(){
+        hoverOnAccessories();
+        clickOnSunglasses();
+        verifyUrlSunglasses();
+        clickOnMaterial();
+        clickOnAcetate();
+    }
+  
+
+
 
 }
