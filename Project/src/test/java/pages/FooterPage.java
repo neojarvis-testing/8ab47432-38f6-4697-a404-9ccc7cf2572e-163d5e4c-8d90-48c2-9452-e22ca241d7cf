@@ -1,5 +1,7 @@
 package pages;
 
+import org.testng.Assert;
+
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
@@ -7,6 +9,7 @@ import uistore.SwarovskiHomePageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class FooterPage {
@@ -124,6 +127,91 @@ public class FooterPage {
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-imprint/Imprint/");
         helper.navigateBack();
     }
+    public void clickOnAccessibility()
+    {
+        try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnAccesbilityStatement);
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAccesbilityStatement, 10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnAccesbilityStatement);
+            test.log(Status.PASS,"Clicked on Accessibility ");
+            LoggerHandler.logInfo("Clicked on Accessibility");
+        } catch (Exception e) {
+            test.log(Status.FAIL,"Unable to Click on Accessibility ");
+            LoggerHandler.logError("Unable to Click on Accessibility ");
+        }  
+    }
+    public void verifyAccessibilityTitle()
+    {
+        String str=Base.driver.getTitle();
+        AssertionUtility.verifyCondition(test, str, "Accessibility");
+    }
+    public void verifyAccessibilityUrl()
+    {
+        String str = Base.driver.getCurrentUrl();
+        AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-accessibility/Accessibility/");
+        helper.navigateBack();
+    }
+    public void clickOnCaliforniaSupplyChainAct()
+    {
+        try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnCaliforniasupplyclainact);
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCaliforniasupplyclainact, 10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnCaliforniasupplyclainact);
+            test.log(Status.PASS,"Clicked on CaliforniaSupplyChainAct ");
+            LoggerHandler.logInfo("Clicked on CaliforniaSupplyChainAct");
+        } catch (Exception e) {
+            test.log(Status.FAIL,"Unable to Click on CaliforniaSupplyChainAct ");
+            LoggerHandler.logError("Unable to Click on CaliforniaSupplyChainAct ");
+        }  
+    }
+    public void verifyCaliforniaSupplyChainActTitle()
+    {
+        String str=Base.driver.getTitle();
+        AssertionUtility.verifyText(test, str, "Swarovski Crystal California Supply Chains Act | Swarovski US");
+    }
+    public void verifyCaliforniaSupplyChainActUrl()
+    {
+        String str = Base.driver.getCurrentUrl();
+        AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-supplychainsact/Swarovski-Crystal-California-Supply-Chains-Act/");
+        helper.navigateBack();
+    }
+    public void clickOnCaliforniaPrivacyRights()
+    {
+        try {
+            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnCaliforniaPrivacyRights);
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCaliforniaPrivacyRights, 10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnCaliforniaPrivacyRights);
+            test.log(Status.PASS,"Clicked on CaliforniaPrivacyRights");
+            LoggerHandler.logInfo("Clicked on CaliforniaPrivacyRights");
+        } catch (Exception e) {
+            test.log(Status.FAIL,"Unable to Click on CaliforniaPrivacyRights");
+            LoggerHandler.logError("Unable to Click on CaliforniaPrivacyRights");
+        }  
+    }
+    public void verifyCaliforniaPrivacyRightsTitle()
+    {
+        String str=Base.driver.getTitle();
+        AssertionUtility.verifyText(test, str, "California Privacy Rights | Swarovski US");
+    }
+    public void verifyCaliforniaPrivacyRightsUrl()
+    {
+        String str = Base.driver.getCurrentUrl();
+        AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-californiaprivacy/");
+        helper.navigateBack();
+    }
+    public void verifyLegal()
+    {
+        String str=helper.getText(SwarovskiHomePageLocators.Label);
+        Assert.assertEquals(str, "LEGAL");
+        test.log(Status.PASS,"Legal verified");
+        LoggerHandler.logInfo("Legal verified");
+        Screenshot.captureScreenShot("Legal verified");
+
+    }
+
+
+
+
 
 
 
@@ -142,6 +230,20 @@ public class FooterPage {
         clickOnImprint();
         verifyimprintTitle();
         verifyimprintUrl();
+        clickOnAccessibility();
+        verifyAccessibilityTitle();
+        verifyAccessibilityUrl();
+        clickOnCaliforniaSupplyChainAct();
+        verifyCaliforniaSupplyChainActTitle();
+        verifyCaliforniaSupplyChainActUrl();
+        clickOnCaliforniaPrivacyRights();
+        verifyCaliforniaPrivacyRightsTitle();
+        verifyCaliforniaPrivacyRightsUrl();
+        verifyLegal();
+
+
+
+
 
 
 
