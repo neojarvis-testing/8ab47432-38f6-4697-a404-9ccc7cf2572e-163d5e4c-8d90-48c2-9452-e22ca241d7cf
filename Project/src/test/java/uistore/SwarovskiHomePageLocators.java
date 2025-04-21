@@ -15,5 +15,12 @@ public class SwarovskiHomePageLocators {
     public static By clickOnTermsOfUse=By.xpath("(//span[text()='Terms Of Use'])[1]");
     public static By clickOnTermsAndConditions=By.xpath("(//span[text()='Terms & Conditions'])[1]");
     public static By clickOnPrivacyPolicy=By.xpath("(//span[text()='Privacy Policy'])[1]");
+    public static By clickOnCalifornia=By.xpath("(//span[text()='CALIFORNIA PROP 65 WARNING'])[1]");
+    public static By clickOnImprint=By.xpath("(//span[text()='Imprint'])[1]");
+    public static By clickOnAccesbilityStatement=By.xpath("(//span[text()='Accessibility Statement'])[1]");
+    public static By clickOnCaliforniasupplyclainact=By.xpath("(//span[text()='California Supply Chain Act'])[1]");
+    public static By clickOnCaliforniaPrivacyRights=By.xpath("(//span[text()='California Privacy Rights'])[1]");
+    public static By Label=By.xpath("(//span[text()='Legal'])[1]");
     
+
 }
