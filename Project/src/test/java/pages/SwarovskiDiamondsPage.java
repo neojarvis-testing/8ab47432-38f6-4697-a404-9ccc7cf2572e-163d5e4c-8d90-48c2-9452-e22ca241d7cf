@@ -78,8 +78,8 @@ public class SwarovskiDiamondsPage {
      */
     public void clickOnMaterial(){
         try {
-            helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnMaterial,10);
-            helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnMaterial);
+            helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnMaterialDropDown,10);
+            helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnMaterialDropDown);
             test.log(Status.INFO,"Click on Material");
             LoggerHandler.logInfo("Click On Material");
         } catch (Exception e) {
