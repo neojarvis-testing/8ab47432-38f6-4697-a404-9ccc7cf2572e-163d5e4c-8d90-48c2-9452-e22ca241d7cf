@@ -1,6 +1,5 @@
 package pages;
 import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.SwarovskiHomePageLocators;
@@ -29,7 +28,6 @@ public class SwarovskiSunglassesPage {
             LoggerHandler.logInfo("Hover on Accessories");
             test.log(Status.PASS, "Hover on Accessories");
         }
-      
         catch(Exception e){
             e.printStackTrace();
             LoggerHandler.logError(" not hover on Accessories");
@@ -44,7 +42,6 @@ public class SwarovskiSunglassesPage {
      * d.Parameters:NA.
      * e.Return Type:NULL.
      */
-    
     public void clickOnSunglasses(){
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnSunglasses, 10);
@@ -202,10 +199,5 @@ public class SwarovskiSunglassesPage {
         clickOnFirstProduct();
         clickOnCareandMaintanece();
         verifyBookanAppointment();
-
     }
-  
-
-
-
 }

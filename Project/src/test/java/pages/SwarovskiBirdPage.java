@@ -174,13 +174,11 @@ public class SwarovskiBirdPage {
             LoggerHandler.logInfo("click On Resuuts");
             test.log(Status.PASS, "click On Results");
             Screenshot.captureScreenShot("clickeResult");
-
         }
         catch(Exception e){
             e.printStackTrace();
             LoggerHandler.logError(" not click On clickOnBirds");
             test.log(Status.FAIL,"not click OnclickOnBirds");
-            
         }
     }
      /*
@@ -190,7 +188,6 @@ public class SwarovskiBirdPage {
      * d.Parameters:NA.
      * e.Return Type:NULL.
      */
-    
      public void verifyDelivery(){
         String data=helper.getText(SwarovskiBirdPageLocators.verifyDeliveryoptions);
         //AssertionUtility.verifyText(test, data, "Delivery Options");
@@ -208,10 +205,5 @@ public class SwarovskiBirdPage {
         clickOnFindInStore();
         clickOnClickAvailbility();
         verifyDelivery();
-        
-
     }
-    
-
-
 }
