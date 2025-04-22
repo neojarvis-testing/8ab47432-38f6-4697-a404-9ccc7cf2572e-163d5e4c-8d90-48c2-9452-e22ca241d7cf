@@ -21,20 +21,9 @@ public class EarringsHomePage {
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
-    /*
-     * A. Method name : verifyLogo
-     * B. Author name : Logisetty Nischith
-     * C. Description : Method to verify the logo
-     * D. Return type : void
-     * E. Parameter : Null
-     */
-    public void verifyLogo() {
-    try {
-        Screenshot.captureScreenShot("Logo Screenshot");
-    } catch (Exception e) {
-       e.printStackTrace(); 
-    }
-    }
+   
+   
+
     /*
      * A. Method name : clickOnsearchIcon
      * B. Author name : Logisetty Nischith
@@ -46,7 +35,6 @@ public class EarringsHomePage {
         try {
             helper.waitForElementToBeClickable(SwarovskiHomePageLocators.clickOnsearchIcon, 5);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnsearchIcon);
-            
             test.log(Status.INFO, "Click on Search Icon");
             LoggerHandler.logInfo("Clicked on Search Icon");
         } catch (Exception e) {
@@ -85,9 +73,8 @@ public class EarringsHomePage {
      */
     public void sendData() {
         try {
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnsearchBar, 5);
-            helper.sendData(SwarovskiHomePageLocators.clickOnsearchBar, ExcelReader.readExcelData(
-                    "/home/coder/project/workspace/Project/testdata/SwarovskiExcelSheet.xlsx", "Sheet1", 0, 0));
+            // helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnsearchBar, 5);
+            helper.sendData(SwarovskiHomePageLocators.clickOnsearchBar, "Earrings");
             test.log(Status.INFO, "Senddata to searchBar as Earrings");
             LoggerHandler.logInfo("Sentdata to searchBar as Earrings");
         } catch (Exception e) {
@@ -260,11 +247,13 @@ public class EarringsHomePage {
     public void testcase7() {
         try {
             helper.scrollByPixel(0, 100);
+            Thread.sleep(2000);
             clickOnsearchIcon();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             clickOnsearchBar();
-
+            Thread.sleep(1000);
             sendData();
+            Thread.sleep(1000);
             enterAction();
             clickOnMaterial();
             clickOnGemstone();

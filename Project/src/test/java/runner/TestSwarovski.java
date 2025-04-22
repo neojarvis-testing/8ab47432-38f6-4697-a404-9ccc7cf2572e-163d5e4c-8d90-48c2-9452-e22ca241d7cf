@@ -38,7 +38,7 @@ public class TestSwarovski extends Base {
 
     
 
-    @Test
+     @Test
     public void test1() {
         test = report.createTest("Sunglasses");
         SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
@@ -94,11 +94,12 @@ public class TestSwarovski extends Base {
 
     @Test
     public void test7() {
+        test = report.createTest("testcase1");
         EarringsHomePage ehp = new EarringsHomePage(test);
         ehp.testcase7();
     }
 
-    @Test
+     @Test
     public void test8() {
         HomePageFooter home = new HomePageFooter(test);
         home.testCase8();
