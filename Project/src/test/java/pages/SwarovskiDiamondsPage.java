@@ -127,7 +127,7 @@ public class SwarovskiDiamondsPage {
      * Parameters: none
      * Return type: void
      */
-    public void clickOnFirstProduct(){
+    public void clickOnFirstProductRing(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnFirstRing,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnFirstRing);
@@ -168,7 +168,7 @@ public class SwarovskiDiamondsPage {
         clickOnMaterial();
         clickOnSterlingSilver();
         clickOnShowProductsButton();
-        clickOnFirstProduct();
+        clickOnFirstProductRing();
         verifySizeKeyword();
         Screenshot.captureScreenShot("Eternity Rings");
          Reporter.logScreenshottoReport("Eternity Rings", test, "attached to report");
