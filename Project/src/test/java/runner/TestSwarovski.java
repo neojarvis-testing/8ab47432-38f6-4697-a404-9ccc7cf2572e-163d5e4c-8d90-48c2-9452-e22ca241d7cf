@@ -33,14 +33,12 @@ public class TestSwarovski extends Base {
         SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
         s.testcase3();
     }
-
     @Test
     public void test2() {
         test = report.createTest("Birds");
         SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
         sd.Birds();
     }
-
     @AfterMethod
     public void close() {
         driver.quit();
