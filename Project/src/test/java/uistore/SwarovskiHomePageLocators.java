@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class SwarovskiHomePageLocators {
     public static By hoverOnGifts = By.xpath("(//span[text()='Gifts'])[1]");
-    public static By clickOnWeddingGifts = By.xpath("//a[@rel='Wedding gifts']/child::span[text()='Wedding gifts']");
+    public static By clickOnWeddingGifts = By.cssSelector("div[data-text-track='Gifts > Occasions > Wedding gifts']>a[rel='Wedding gifts']");
     public static By clickOnCategories = By.xpath("//span[@class='swa-filter-category-desktop__filter-name swa-label-sans--small' and contains(text(),'Categories')]");
     public static By clickOnWatches = By.xpath("(//li[@class='swa-filter-list-item']/child::label[contains(text(),'Watches')])[2]");
     public static By clickOnAllWatches = By.cssSelector("label[for='filter-category-0202']");

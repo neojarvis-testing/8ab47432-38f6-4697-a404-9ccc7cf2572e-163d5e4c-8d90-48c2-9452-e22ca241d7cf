@@ -19,6 +19,13 @@ public class SwarovskiDiamondsPage {
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
     }
+     /*
+     * Method Name: hoverOnSwarovskiCreatedDiamonds
+     * Author name: Kartik Bameta
+     * Description: Performs hover action on Swarovski Created Diamonds.
+     * Parameters: none
+     * Return type: void
+     */
     public void hoverOnSwarovskiCreatedDiamonds(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.hoverOnSwarovskiCreatedDiamonds,10);
@@ -29,6 +36,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: clickOnEternity
+     * Author name: Kartik Bameta
+     * Description: Performs click action on Eternity.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnEternity(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnEternity,10);
@@ -39,6 +53,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: verifyURLText
+     * Author name: Kartik Bameta
+     * Description: Verifies that the url contains the keyword "collection-eternity".
+     * Parameters: none
+     * Return type: void
+     */
     public void verifyURLText(){
         try {
             String str = Base.driver.getCurrentUrl();
@@ -47,6 +68,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: clickOnMaterial
+     * Author name: Kartik Bameta
+     * Description: Clicks on the Material in the navigation bar.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnMaterial(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnMaterial,10);
@@ -57,6 +85,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: clickOnSterlingSilver
+     * Author name: Kartik Bameta
+     * Description: Clicks on the Sterling Silver option.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnSterlingSilver(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnSterlingSilver,10);
@@ -67,6 +102,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: clickOnShowProductsButton
+     * Author name: Kartik Bameta
+     * Description: Clicks on the Show product button and shows a list of all products after applying certain filters.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnShowProductsButton(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnShowButton,10);
@@ -77,6 +119,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: clickOnFirstProduct
+     * Author name: Kartik Bameta
+     * Description: Clicks on the first product that'll appear after clicking on the Show Products button.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnFirstProduct(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnFirstRing,10);
@@ -87,6 +136,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: verifySizeKeyword
+     * Author name: Kartik Bameta
+     * Description: Verifies the key word "Select size" and record the logs.
+     * Parameters: none
+     * Return type: void
+     */
     public void verifySizeKeyword(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnEternity,10);
@@ -97,6 +153,13 @@ public class SwarovskiDiamondsPage {
         }
     }
 
+    /*
+     * Method Name: testSwarovskiDiamondPage
+     * Author name: Kartik Bameta
+     * Description: Calls all the methods defined above and this method will be called inside runner page for execution.
+     * Parameters: none
+     * Return type: void
+     */
     public void testSwarovskiDiamondPage(){
         hoverOnSwarovskiCreatedDiamonds();
         clickOnEternity();
