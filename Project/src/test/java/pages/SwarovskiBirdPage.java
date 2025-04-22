@@ -7,6 +7,7 @@ import uistore.SwarovskiHomePageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 public class SwarovskiBirdPage {
@@ -110,6 +111,7 @@ public class SwarovskiBirdPage {
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnResults);
             LoggerHandler.logInfo("click On Resuuts");
             test.log(Status.PASS, "click On Results");
+            Reporter.logScreenshottoReport("Swarovski", test, "captured screnshot");
         }
         catch(Exception e){
             e.printStackTrace();
@@ -178,6 +180,7 @@ public class SwarovskiBirdPage {
             e.printStackTrace();
             LoggerHandler.logError(" not click On clickOnBirds");
             test.log(Status.FAIL,"not click OnclickOnBirds");
+            
         }
     }
      /*
