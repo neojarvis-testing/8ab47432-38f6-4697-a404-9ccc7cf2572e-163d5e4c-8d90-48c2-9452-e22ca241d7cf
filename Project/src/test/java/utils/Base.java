@@ -22,7 +22,7 @@ public class Base {
     public static FileInputStream file;
     public static Properties prop;
 
-    public void loadProperties() throws IOException {
+    public static void loadProperties() throws IOException {
         String propertiesPath = System.getProperty("user.dir") + "/config/config.properties";
         try {
             file = new FileInputStream(propertiesPath);
@@ -35,7 +35,7 @@ public class Base {
         }
     }
 
-    public void openBrowser() {
+    public static void openBrowser() {
 
         try {
             loadProperties();
