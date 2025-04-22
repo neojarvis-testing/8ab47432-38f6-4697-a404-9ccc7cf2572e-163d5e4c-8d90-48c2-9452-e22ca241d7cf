@@ -257,7 +257,7 @@ public class EarringsHomePage {
         }
     }
 
-    public void testcase7() {
+    public void testEarings() {
         try {
             helper.scrollByPixel(0, 100);
             clickOnsearchIcon();

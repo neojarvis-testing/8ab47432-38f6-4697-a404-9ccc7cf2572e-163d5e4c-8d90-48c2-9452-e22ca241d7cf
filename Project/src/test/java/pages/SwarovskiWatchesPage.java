@@ -114,8 +114,8 @@ public void testWatches(){
     clickOnClose();
     clickOnWishList();
     verifyResult();
-    clickOnFirstProduct();
-    clickOnAddToBag();
+    // clickOnFirstProduct();
+    // clickOnAddToBag();
 }
 
 

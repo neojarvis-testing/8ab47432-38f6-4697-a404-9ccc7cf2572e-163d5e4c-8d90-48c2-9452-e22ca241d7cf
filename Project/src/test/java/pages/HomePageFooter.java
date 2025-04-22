@@ -493,7 +493,7 @@ public class HomePageFooter {
             LoggerHandler.logError("Not verified text Membership");
         }
     }
-    public void testCase8(){
+    public void testFooter(){
         clickOnCustomerServiceOverview();
         verifyURLOfCustomerServiceOverview();
         verifyTitleOfCustomerServiceOverview();
