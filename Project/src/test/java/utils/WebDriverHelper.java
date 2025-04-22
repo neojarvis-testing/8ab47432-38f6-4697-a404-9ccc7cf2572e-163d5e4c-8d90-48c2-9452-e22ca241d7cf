@@ -243,5 +243,4 @@ public class WebDriverHelper {
     {
         Base.driver.navigate().back();
     }
-
 }

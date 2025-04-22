@@ -1,4 +1,5 @@
 package runner;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -11,39 +12,90 @@ import pages.FooterPage;
 import pages.SwarovskiAboutUsPage;
 import utils.Base;
 import utils.Reporter;
+
+import pages.SwarovskiHomePage;
+import pages.SwarovskiWatchesPage;
+import pages.EarringsHomePage;
+import pages.HomePageFooter;
+import pages.SwarovskiBirdPage;
+import pages.SwarovskiSunglassesPage;
+
 public class TestSwarovski extends Base {
     public static ExtentTest test;
-    public  static ExtentReports report;
+    public static ExtentReports report;
+
     @BeforeClass
-    public void generateReport(){
-        report=Reporter.createExtentReport("Report");
+    public void generateReport() {
+        report = Reporter.createExtentReport("Report");
     }
+
     @BeforeMethod
-    public void openb(){
+    public void openb() {
         openBrowser();
     }
+
     @Test
-    public void AboutUs(){
-    test=report.createTest("Footer");
-    SwarovskiAboutUsPage sp=new SwarovskiAboutUsPage(test);
-    sp.execute();
-    }   
+    public void test1() {
+        test = report.createTest("Sunglasses");
+        SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
+        s.testcase3();
+    }
+
     @Test
-    public void Legal(){
-    test=report.createTest("Footer");
-    FooterPage fp=new FooterPage(test);
-    fp.testing();
-    }    
+    public void test2() {
+        test = report.createTest("Birds");
+        SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
+        sd.Birds();
+    }
+
+    @Test
+    public void AboutUs() {
+        test = report.createTest("Footer");
+        SwarovskiAboutUsPage sp = new SwarovskiAboutUsPage(test);
+        sp.execute();
+    }
+
+    @Test
+    public void Legal() {
+        test = report.createTest("Footer");
+        FooterPage fp = new FooterPage(test);
+        fp.testing();
+    }
+
+    @Test(enabled = true)
+    public void testpendants() {
+        test = report.createTest("Swarovski_testpendants");
+        SwarovskiHomePage swarovskiHomePage = new SwarovskiHomePage(test);
+        swarovskiHomePage.testPendants();
+    }
+
+    @Test(enabled = true)
+    public void testwatches() {
+        test = report.createTest("Swarovski_testwatches");
+        SwarovskiWatchesPage swarovskiWatchesPage = new SwarovskiWatchesPage(test);
+        swarovskiWatchesPage.testWatches();
+    }
+
+    @Test
+    public void test7() {
+        EarringsHomePage ehp = new EarringsHomePage(test);
+        ehp.testcase7();
+    }
+
+    @Test
+    public void test8() {
+        HomePageFooter home = new HomePageFooter(test);
+        home.testCase8();
+    }
+
     @AfterMethod
-    public void close(){
+    public void close() {
         driver.quit();
     }
+
     @AfterClass
-    public  void flushi(){
+    public void flushi() {
         report.flush();
     }
-   
- 
- 
- 
+
 }
