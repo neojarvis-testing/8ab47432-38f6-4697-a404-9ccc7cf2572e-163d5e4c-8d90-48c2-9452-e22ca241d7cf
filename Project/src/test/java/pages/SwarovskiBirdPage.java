@@ -111,7 +111,7 @@ public class SwarovskiBirdPage {
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnResults);
             LoggerHandler.logInfo("click On Resuuts");
             test.log(Status.PASS, "click On Results");
-            Reporter.logScreenshottoReport("Swarovski", test, "captured screnshot");
+           
         }
         catch(Exception e){
             e.printStackTrace();

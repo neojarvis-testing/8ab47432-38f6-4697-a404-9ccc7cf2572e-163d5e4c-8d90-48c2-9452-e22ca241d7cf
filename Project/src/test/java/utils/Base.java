@@ -78,14 +78,11 @@ public class Base {
             System.err.println("Invalid execution type: " + executionType);
         }
 
-        if (driver != null)
-
-        {
+        if (driver != null){
             driver.manage().window().maximize();
             driver.get(prop.getProperty("url"));
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
         }
         // Dont remove the listener Object
 

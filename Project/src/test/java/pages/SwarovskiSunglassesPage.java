@@ -32,8 +32,7 @@ public class SwarovskiSunglassesPage {
             e.printStackTrace();
             LoggerHandler.logError(" not hover on Accessories");
             test.log(Status.FAIL,"not hover on Accessories");
-        }
-        
+        }   
     }
      /*
      * a.Method Name:clickOnSunglasses()
