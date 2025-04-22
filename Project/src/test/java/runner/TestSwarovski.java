@@ -13,7 +13,6 @@ import com.aventstack.extentreports.ExtentTest;
 import pages.SwarovskiDiamondsPage;
 import pages.SwarovskiGiftsPage;
 import utils.Base;
-import utils.ExcelReader;
 import utils.Reporter;
 
 public class TestSwarovski extends Base {
