@@ -5,9 +5,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import pages.EarringsHomePage;
+import pages.HomePageFooter;
 import pages.SwarovskiBirdPage;
 import pages.SwarovskiSunglassesPage;
 import utils.Base;
@@ -39,6 +42,18 @@ public class TestSwarovski extends Base {
         test = report.createTest("Birds");
         SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
         sd.Birds();
+    }
+
+    @Test
+    public void test7() {
+        EarringsHomePage ehp = new EarringsHomePage(test);
+        ehp.testcase7();
+    }
+
+    @Test
+    public void test8() {
+        HomePageFooter home = new HomePageFooter(test);
+        home.testCase8();
     }
 
     @AfterMethod
