@@ -13,6 +13,7 @@ import com.aventstack.extentreports.ExtentTest;
 import pages.SwarovskiDiamondsPage;
 import pages.SwarovskiGiftsPage;
 import utils.Base;
+import utils.ExcelReader;
 import utils.Reporter;
 
 public class TestSwarovski extends Base {
@@ -28,7 +29,7 @@ public class TestSwarovski extends Base {
     }
      @Test
     public void testCase5(){
-        test=report.createTest("Test Case 5");
+        test=report.createTest(ExcelReader.readExcelData(System.getProperty("user.dir")+"/testdata/SwarovskiExcelSheet.xlsx","Seet1",6,4));
         SwarovskiGiftsPage giftsPage = new SwarovskiGiftsPage(test);
         giftsPage.testSwarovskiGiftsPage();
     }
