@@ -35,13 +35,13 @@ public class TestSwarovski extends Base {
     }
      
     
-@Test
+@Test(enabled = true)
 public void testswarovskiGiftsPage(){
     test=report.createTest("Test Case 5");
     SwarovskiGiftsPage giftsPage = new SwarovskiGiftsPage(test);
     giftsPage.testSwarovskiGiftsPage();
 }
-@Test
+@Test(enabled = true)
 public void testswarovskiDiamondPage(){
         test=report.createTest("Test Case 6");
     SwarovskiDiamondsPage diamondPage = new SwarovskiDiamondsPage(test);
@@ -51,14 +51,14 @@ public void testswarovskiDiamondPage(){
 
 
 
-@Test
+@Test(enabled = true)
 public void AboutUs() {
     test = report.createTest("Footer");
     SwarovskiAboutUsPage sp = new SwarovskiAboutUsPage(test);
     sp.execute();
 }
 
-@Test
+@Test(enabled = true)
 public void Legal() {
     test = report.createTest("Footer");
     FooterPage fp = new FooterPage(test);
@@ -66,40 +66,40 @@ public void Legal() {
 }
 
 
-@Test
+@Test(enabled = true)
 public void testsunglass() {
     test = report.createTest("Sunglasses");
     SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
     s.testSunglass();
 }
     
-@Test
+@Test(enabled = true)
 public void testBirds() {
     test = report.createTest("Birds");
     SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
     sd.Birds();
 }
     
-@Test
+@Test(enabled = true)
 public void testpendants(){
     test=report.createTest("Swarovski_testpendants");
     SwarovskiHomePage swarovskiHomePage= new SwarovskiHomePage(test);
     swarovskiHomePage.testPendants();
 }
-@Test
+@Test(enabled = true)
 public void testwatches(){
     test=report.createTest("Swarovski_testwatches");
     SwarovskiWatchesPage swarovskiWatchesPage= new SwarovskiWatchesPage(test);
     swarovskiWatchesPage.testWatches();
 }
-@Test
+@Test(enabled = true)
 public void testearings() {
     test=report.createTest("testEarings");
     EarringsHomePage ehp = new EarringsHomePage(test);
     ehp.testEarings();
 }
 
-@Test
+@Test(enabled = true)
 public void testFooter() {
     test=report.createTest("testFooter");
     HomePageFooter home = new HomePageFooter(test);

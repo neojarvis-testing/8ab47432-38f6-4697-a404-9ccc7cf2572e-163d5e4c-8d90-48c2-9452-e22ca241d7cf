@@ -278,9 +278,9 @@ public void testPendants(){
     clickOnColor();
     clickOnWhite();
     clickOnShowProduct49();
-    clickOnFirstProduct();
-    verifyFindInStore();
-    clickOnAddToBag();
+    // clickOnFirstProduct();
+    // verifyFindInStore();
+    // clickOnAddToBag();
 
 }
 

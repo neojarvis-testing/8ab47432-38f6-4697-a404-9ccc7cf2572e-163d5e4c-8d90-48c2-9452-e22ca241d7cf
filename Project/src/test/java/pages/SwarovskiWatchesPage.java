@@ -171,8 +171,8 @@ public void testWatches(){
     clickOnClose();
     clickOnWishList();
     verifyResult();
-    // clickOnFirstWatchProduct();
-    // clickOnAddToBag();
+    clickOnFirstWatchProduct();
+    clickOnAddToBag();
 }
 
 

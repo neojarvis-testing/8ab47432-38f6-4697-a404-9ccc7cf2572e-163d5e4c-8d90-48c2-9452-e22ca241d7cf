@@ -46,6 +46,6 @@ public static By clickOnWhite= By.xpath("//div[@id='dropdown-facet-value-list-co
 public static By clickOnShowProduct49= By.xpath("(//span[contains(text(),'49 products')])[4]");
 public static By clickOnPendentFirstProduct= By.xpath("//span[text()='Ariana Grande x Swarovski pendant']");
 public static By verifyFindInStore= By.xpath("//span[text()=' Find in store']");
-public static By clickOnAddToBag = By.cssSelector("button[id='addToCartButton']");
+public static By clickOnAddToBag = By.xpath("//span[text()='Add to bag']");
 public static By clickOnCrossButton = By.xpath("//div[@class='swa-sc-nl-popup__close-icon__image']");
 }
