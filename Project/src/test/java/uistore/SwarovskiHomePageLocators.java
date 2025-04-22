@@ -22,7 +22,7 @@ public static By clickOnBirds = By.cssSelector("#navDecorationsNatureBirdsLink")
 
 //Kartik Bameta
 public static By hoverOnGifts = By.xpath("(//span[text()='Gifts'])[1]");
-public static By clickOnWeddingGifts = By.cssSelector("div[data-text-track='Gifts > Occasions > Wedding gifts']>a[rel='Wedding gifts']");
+public static By clickOnWeddingGifts = By.xpath("(//span[text()='Wedding gifts'])[1]");
 public static By clickOnCategories = By.xpath("//span[@class='swa-filter-category-desktop__filter-name swa-label-sans--small' and contains(text(),'Categories')]");
 public static By clickOnWatches = By.xpath("(//li[@class='swa-filter-list-item']/child::label[contains(text(),'Watches')])[2]");
 public static By clickOnAllWatches = By.cssSelector("label[for='filter-category-0202']");
@@ -44,7 +44,7 @@ public static By clickOnShowProduct= By.cssSelector("button[data-url*='product_m
 public static By clickOnColor= By.cssSelector("div[data-filter-id='consumer_color']>span[class='swa-filter-category-desktop__filter-name swa-label-sans--small']");
 public static By clickOnWhite= By.xpath("//div[@id='dropdown-facet-value-list-consumer_color']/descendant::span[text()='White']");
 public static By clickOnShowProduct49= By.xpath("(//span[contains(text(),'49 products')])[4]");
-public static By clickOnPendentFirstProduct= By.xpath("//span[text()='Ariana Grande x Swarovski pendant']");
+public static By clickOnPendentFirstProduct= By.xpath("(//div[@class='swa-product-tile-plp__top'])[1]");
 public static By verifyFindInStore= By.xpath("//span[text()=' Find in store']");
 public static By clickOnAddToBag = By.xpath("//span[text()='Add to bag']");
 public static By clickOnCrossButton = By.xpath("//div[@class='swa-sc-nl-popup__close-icon__image']");

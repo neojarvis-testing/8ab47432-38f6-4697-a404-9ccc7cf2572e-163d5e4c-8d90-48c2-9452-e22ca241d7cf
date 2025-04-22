@@ -38,9 +38,9 @@ public class SwarovskiDiamondsPage {
         }
     }
     /*
-     * Method Name: clickOnEternity
+     * Method Name: clickOnCategories
      * Author name: Kartik Bameta
-     * Description: Performs click action on Eternity.
+     * Description: Performs click action on Categories.
      * Parameters: none
      * Return type: void
      */
@@ -54,6 +54,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+    /*
+     * Method Name: clickOnEternity
+     * Author name: Kartik Bameta
+     * Description: Performs click action on Eternity.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnEternity(){
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnEternity,10);
@@ -64,6 +71,13 @@ public class SwarovskiDiamondsPage {
             System.out.println(e.getMessage());
         }
     }
+     /*
+     * Method Name: clickOnRings
+     * Author name: Kartik Bameta
+     * Description: Performs click action on Rings.
+     * Parameters: none
+     * Return type: void
+     */
     public void clickOnRings(){
         helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnRings,10);
         helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnRings);
