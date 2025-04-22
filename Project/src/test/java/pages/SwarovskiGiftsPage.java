@@ -28,9 +28,10 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void hoverOverGifts(){
+        
         helper.waitForElementToBeVisible(SwarovskiHomePageLocators.hoverOnGifts,10);
         helper.hoverElement(SwarovskiHomePageLocators.hoverOnGifts);
-        test.log(Status.INFO,"Hover on Gifts");
+        test.log(Status.PASS,"Hover on Gifts");
         LoggerHandler.logInfo("Hover on Gifts");
     }
     /*
