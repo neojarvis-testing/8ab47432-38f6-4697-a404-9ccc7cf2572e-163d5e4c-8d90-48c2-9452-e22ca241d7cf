@@ -3,24 +3,23 @@ package uistore;
 import org.openqa.selenium.By;
 
 public class SwarovskiHomePageLocators {
-    public static By clickOnsearchIcon = By.xpath("(//a[@data-url='/en-US/search/autocomplete/SEARCH-BOX/'])[2]");
-    public static By clickOnsearchBar = By.cssSelector("input[placeholder='Search']");
-    // Poojitha
-    public static By hoverOnAccessories = By.xpath("(//span[text()='Accessories'])[1]");
-    public static By clickOnSunglasses = By.cssSelector("#navAccessoriesSunglassesLink");
-    public static By clickOnMaterial = By.xpath("//span[contains(text(),'Material')]");
-    public static By clickOnAcetate = By.xpath("(//span[text()='Acetate'])[2]");
-    public static By clickOnShowProducts = By.cssSelector("span.swa-button__text swa-label-sans--medium-strong");
-    public static By clickOnFirstProduct = By.xpath("(//span[text()='Sunglasses'])[8]");
-    public static By clickonCareandMaintainence = By.cssSelector("#tabby-toggle_swa-accessible-ALWAYSON_PDP_ACC-ENTRY_CARE_ROW");
-    public static By bookAnAppointmnet = By.xpath("//a[contains(text(),'Book an appointment')]");
-    public static By verifyLogin = By.xpath("(//span[contains(text(),'Login')])[1]");
-    public static By hoverOnDecorations = By.xpath("(//span[text()='Decorations'])[1]");
-    public static By clickOnBirds = By.cssSelector("#navDecorationsNatureBirdsLink");
-
-    // public static By hoverOverJwelleries= By.cssSelector("a[href*=KCQjw2ZfABhDBARI]");
+//NISCHITH
+public static By clickOnsearchIcon = By.xpath("(//a[@data-url='/en-US/search/autocomplete/SEARCH-BOX/'])[2]");
+public static By clickOnsearchBar = By.cssSelector("input[placeholder='Search']");
+// Poojitha
+public static By hoverOnAccessories = By.xpath("(//span[text()='Accessories'])[1]");
+public static By clickOnSunglasses = By.cssSelector("#navAccessoriesSunglassesLink");
+public static By clickOnMaterial = By.xpath("//span[contains(text(),'Material')]");
+public static By clickOnAcetate = By.xpath("(//span[text()='Acetate'])[2]");
+public static By clickOnShowProducts = By.cssSelector("span.swa-button__text swa-label-sans--medium-strong");
+public static By clickOnFirstProduct = By.xpath("(//span[text()='Sunglasses'])[8]");
+public static By clickonCareandMaintainence = By.cssSelector("#tabby-toggle_swa-accessible-ALWAYSON_PDP_ACC-ENTRY_CARE_ROW");
+public static By bookAnAppointmnet = By.xpath("//a[contains(text(),'Book an appointment')]");
+public static By verifyLogin = By.xpath("(//span[contains(text(),'Login')])[1]");
+public static By hoverOnDecorations = By.xpath("(//span[text()='Decorations'])[1]");
+public static By clickOnBirds = By.cssSelector("#navDecorationsNatureBirdsLink");
+//RAHAMAN
 public static By hoverOverJwelleries= By.xpath("(//span[text()='Jewelry'])[1]");
-// public static By clickOnPendants= By.cssSelector("a[id='navJewelryPendantsLink'][href*=mDzSHCSg714Vf1RnaOYgaArisEAL]");
 public static By clickOnPendants= By.xpath("(//span[text()='Pendants'])[1]");
 public static By clickOnMeterial= By.xpath("//span[contains(text(),'Material')]");
 public static By clickOnCrystal= By.xpath("(//span[text()='Crystals'])[2]");
@@ -28,7 +27,6 @@ public static By clickOnShowProduct= By.cssSelector("button[data-url*='product_m
 public static By clickOnColor= By.cssSelector("div[data-filter-id='consumer_color']>span[class='swa-filter-category-desktop__filter-name swa-label-sans--small']");
 public static By clickOnWhite= By.xpath("//div[@id='dropdown-facet-value-list-consumer_color']/descendant::span[text()='White']");
 public static By clickOnShowProduct49= By.xpath("(//span[contains(text(),'49 products')])[4]");
-// public static By clickOnFirstProduct= By.xpath("div[class='swa-product-tile-plp']>a[href*=Ariana-Grande-x-Swarovski-pendant]");
 public static By clickOnPendentFirstProduct= By.xpath("//span[text()='Ariana Grande x Swarovski pendant']");
 public static By verifyFindInStore= By.xpath("//span[text()=' Find in store']");
 public static By clickOnAddToBag = By.cssSelector("button[id='addToCartButton']");

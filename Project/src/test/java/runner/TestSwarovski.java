@@ -32,43 +32,45 @@ public class TestSwarovski extends Base {
         openBrowser();
     }
 
-    @Test
-    public void test1() {
-        test = report.createTest("Sunglasses");
-        SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
-        s.testcase3();
-    }
+@Test
+public void testsunglass() {
+    test = report.createTest("Sunglasses");
+    SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
+    s.testSunglass();
+}
 
-    @Test
-    public void test2() {
-        test = report.createTest("Birds");
-        SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
-        sd.Birds();
-    }
+@Test
+public void testBirds() {
+    test = report.createTest("Birds");
+    SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
+    sd.Birds();
+}
 
-@Test(enabled = true)
+@Test
 public void testpendants(){
     test=report.createTest("Swarovski_testpendants");
     SwarovskiHomePage swarovskiHomePage= new SwarovskiHomePage(test);
     swarovskiHomePage.testPendants();
 }
-@Test(enabled = true)
+@Test
 public void testwatches(){
     test=report.createTest("Swarovski_testwatches");
     SwarovskiWatchesPage swarovskiWatchesPage= new SwarovskiWatchesPage(test);
     swarovskiWatchesPage.testWatches();
 }
-    @Test
-    public void test7() {
-        EarringsHomePage ehp = new EarringsHomePage(test);
-        ehp.testcase7();
-    }
+@Test
+public void testearings() {
+    test=report.createTest("testEarings");
+    EarringsHomePage ehp = new EarringsHomePage(test);
+    ehp.testEarings();
+}
 
-    @Test
-    public void test8() {
-        HomePageFooter home = new HomePageFooter(test);
-        home.testCase8();
-    }
+@Test
+public void testFooter() {
+    test=report.createTest("testFooter");
+    HomePageFooter home = new HomePageFooter(test);
+    home.testFooter();
+}
 
     @AfterMethod
     public void close() {
