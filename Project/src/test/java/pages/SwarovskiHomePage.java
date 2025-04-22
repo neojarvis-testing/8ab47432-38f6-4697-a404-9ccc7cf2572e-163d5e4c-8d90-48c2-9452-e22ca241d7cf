@@ -211,9 +211,9 @@ private void clickOnFirstProduct(){
         } catch (Exception e) {
         }
         helper.scrollByPixel(0, 200);
-        helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnFirstProduct, 10);
-        helper.waitForElementToBeClickable(SwarovskiHomePageLocators.clickOnFirstProduct, 10);
-        helper.clickOnElement(SwarovskiHomePageLocators.clickOnFirstProduct);
+        helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnPendentFirstProduct, 10);
+        helper.waitForElementToBeClickable(SwarovskiHomePageLocators.clickOnPendentFirstProduct, 10);
+        helper.clickOnElement(SwarovskiHomePageLocators.clickOnPendentFirstProduct);
         test.log(Status.INFO, "Click on FirstProduct");
         LoggerHandler.logInfo("Click on FirstProduct");
     } catch (Exception e) {

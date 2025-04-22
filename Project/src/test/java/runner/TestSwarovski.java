@@ -11,44 +11,73 @@ import com.aventstack.extentreports.ExtentTest;
 
 import pages.SwarovskiHomePage;
 import pages.SwarovskiWatchesPage;
+import pages.EarringsHomePage;
+import pages.HomePageFooter;
+import pages.SwarovskiBirdPage;
+import pages.SwarovskiSunglassesPage;
 import utils.Base;
 import utils.Reporter;
 
-public class TestSwarovski {
+public class TestSwarovski extends Base {
+    public static ExtentTest test;
+    public static ExtentReports report;
 
-public static ExtentTest test;
-public static ExtentReports reports;
+    @BeforeClass
+    public void generateReport() {
+        report = Reporter.createExtentReport("Report");
+    }
 
-@BeforeClass
-public void openReport(){
-    reports=Reporter.createExtentReport("Swarovski_Report");
-}
+    @BeforeMethod
+    public void openb() {
+        openBrowser();
+    }
 
-@AfterClass
-public void closeReport(){
-    reports.flush();
-}
+    @Test
+    public void test1() {
+        test = report.createTest("Sunglasses");
+        SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
+        s.testcase3();
+    }
 
-@BeforeMethod
-public void launchBrowser(){
-    Base.openBrowser();
-}
-@AfterMethod
-public void closeBrowser(){
-    Base.driver.quit();
-}
+    @Test
+    public void test2() {
+        test = report.createTest("Birds");
+        SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
+        sd.Birds();
+    }
 
 @Test(enabled = true)
 public void testpendants(){
-    test=reports.createTest("Swarovski_testpendants");
+    test=report.createTest("Swarovski_testpendants");
     SwarovskiHomePage swarovskiHomePage= new SwarovskiHomePage(test);
     swarovskiHomePage.testPendants();
 }
 @Test(enabled = true)
 public void testwatches(){
-    test=reports.createTest("Swarovski_testwatches");
+    test=report.createTest("Swarovski_testwatches");
     SwarovskiWatchesPage swarovskiWatchesPage= new SwarovskiWatchesPage(test);
     swarovskiWatchesPage.testWatches();
 }
+    @Test
+    public void test7() {
+        EarringsHomePage ehp = new EarringsHomePage(test);
+        ehp.testcase7();
+    }
+
+    @Test
+    public void test8() {
+        HomePageFooter home = new HomePageFooter(test);
+        home.testCase8();
+    }
+
+    @AfterMethod
+    public void close() {
+        driver.quit();
+    }
+
+    @AfterClass
+    public void flushi() {
+        report.flush();
+    }
 
 }
