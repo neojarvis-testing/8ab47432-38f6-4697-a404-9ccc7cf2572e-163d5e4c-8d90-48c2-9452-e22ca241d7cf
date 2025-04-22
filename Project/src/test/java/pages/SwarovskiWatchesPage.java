@@ -27,7 +27,7 @@ private void hoverOverWatches(){
     try {
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.hoverOverWatches, 10);
         helper.hoverElement(SwarovskiWatchesLocators.hoverOverWatches);
-        test.log(Status.INFO, "Hover on on Watches");
+        test.log(Status.PASS, "Hover on on Watches");
         LoggerHandler.logInfo("Hover on Watches");
     } catch (Exception e) {
         test.log(Status.FAIL, "Can not Hover on Watches");
@@ -46,7 +46,7 @@ private void clickOnImber(){
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnImber, 10);
         helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnImber, 10);
         helper.clickOnElement(SwarovskiWatchesLocators.clickOnImber);
-        test.log(Status.INFO, "Click on Imber");
+        test.log(Status.PASS, "Click on Imber");
         LoggerHandler.logInfo("Click on Imber");
     } catch (Exception e) {
         test.log(Status.FAIL, "Can not Click on Imber");
@@ -66,7 +66,7 @@ private void clickOnCategories(){
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnCategories, 10);
         helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnCategories, 10);
         helper.clickOnElement(SwarovskiWatchesLocators.clickOnCategories);
-        test.log(Status.INFO, "Click on Categories");
+        test.log(Status.PASS, "Click on Categories");
         LoggerHandler.logInfo("Click on Categories");
     } catch (Exception e) {
         test.log(Status.FAIL, "Can not Click on Categories");
@@ -85,7 +85,7 @@ private void clickOnClose(){
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnClose, 10);
         helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnClose, 10);
         helper.clickOnElement(SwarovskiWatchesLocators.clickOnClose);
-        test.log(Status.INFO, "Click on Close");
+        test.log(Status.PASS, "Click on Close");
         LoggerHandler.logInfo("Click on Close");
     } catch (Exception e) {
         test.log(Status.FAIL, "Can not Click on Close");
@@ -105,7 +105,7 @@ private void clickOnWishList(){
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnWishList, 10);
         helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnWishList, 10);
         helper.clickOnElement(SwarovskiWatchesLocators.clickOnWishList);
-        test.log(Status.INFO, "Click on WishList");
+        test.log(Status.PASS, "Click on WishList");
         LoggerHandler.logInfo("Click on WishList");
     } catch (Exception e) {
         test.log(Status.FAIL, "Can not Click on WishList");
@@ -129,7 +129,7 @@ private void clickOnFirstWatchProduct(){
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnFirstWatchProduct, 10);
         helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnFirstWatchProduct, 10);
         helper.clickOnElement(SwarovskiWatchesLocators.clickOnFirstWatchProduct);
-        test.log(Status.INFO, "Click on FirstWatchProduct");
+        test.log(Status.PASS, "Click on FirstWatchProduct");
         LoggerHandler.logInfo("Click on FirstWatchProduct");
     } catch (Exception e) {
         test.log(Status.FAIL, "Can not Click on FirstWatchProduct");
@@ -144,12 +144,12 @@ private void clickOnFirstWatchProduct(){
 * e.Return Type: void
 */
 private void clickOnAddToBag(){
+    helper.scrollByPixel(0, 150);
     try {
-        helper.scrollByPixel(0, 150);
         helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnAddToBag, 10);
         helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnAddToBag, 10);
         helper.clickOnElement(SwarovskiWatchesLocators.clickOnAddToBag);
-        test.log(Status.INFO, "Click on Add to bag");
+        test.log(Status.PASS, "Click on Add to bag");
         LoggerHandler.logInfo("Click on Add to bag");
         Screenshot.captureScreenShot("Add to bag");
     } catch (Exception e) {
@@ -171,8 +171,8 @@ public void testWatches(){
     clickOnClose();
     clickOnWishList();
     verifyResult();
-    // clickOnFirstWatchProduct();
-    // clickOnAddToBag();
+    clickOnFirstWatchProduct();
+    clickOnAddToBag();
 }
 
 

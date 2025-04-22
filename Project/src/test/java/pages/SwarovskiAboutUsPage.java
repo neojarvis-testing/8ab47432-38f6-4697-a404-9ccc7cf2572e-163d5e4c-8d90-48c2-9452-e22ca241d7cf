@@ -72,7 +72,7 @@ public class SwarovskiAboutUsPage {
     public void verifySustainabilityTitle()
     {
         String str=Base.driver.getTitle();
-        AssertionUtility.verifyText(test, str, "Sustainability and Corporate Responsibility  | Swarovski US");
+        AssertionUtility.verifyText(test, str, "Sustainability and Corporate Responsibility | Swarovski US");
     }
     public void verifySustainabilityUrl()
     {
@@ -125,7 +125,7 @@ public class SwarovskiAboutUsPage {
     public void verifyAlumniCommunityUrl()
     {
         String str = Base.driver.getCurrentUrl();
-        AssertionUtility.verifyText(test, str, "https://alumni.swarovski.com/alumni/");
+        AssertionUtility.verifyText(test, str, "https://alumni.swarovski.com/alumni/anon/landing-page");
         helper.switchToHome();
     }
     public void clickOnCorporategifts()

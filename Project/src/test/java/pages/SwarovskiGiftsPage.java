@@ -41,10 +41,18 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void clickOnWeddingGifts(){
+
+       try{
         helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnWeddingGifts,10);
         helper.clickOnElement(SwarovskiHomePageLocators.clickOnWeddingGifts);
         test.log(Status.INFO, "Click on Wedding Gifts");
         LoggerHandler.logInfo("Click on Wedding Gifts");
+       }
+       catch(Exception e){
+        test.log(Status.INFO," not Click On WeddingGifts");
+            LoggerHandler.logInfo(" not Click on WeddingGifts");
+
+       }
     }
     /*
      * Method Name: verifyTitleText

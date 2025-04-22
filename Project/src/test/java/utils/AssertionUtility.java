@@ -21,7 +21,9 @@ public class AssertionUtility {
             LoggerHandler.logInfo("Verified: "+expected);
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Can not Verify: "+expected);
+            test.log(Status.INFO, "Actual is this: "+actual);
             LoggerHandler.logError("Can not Verify: "+expected);
+            LoggerHandler.logInfo("Actual is this: "+actual);
         }
 
     }
@@ -40,7 +42,9 @@ public class AssertionUtility {
             LoggerHandler.logInfo("Verified that the text contains: "+containsPart);
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Can not Verify that the text contains: "+containsPart);
+            test.log(Status.INFO, "Actual is this: "+actual);
             LoggerHandler.logError("Can not Verify that the text contains: "+containsPart);
+            LoggerHandler.logInfo("Actual is this: "+actual);
         }
     }
 
