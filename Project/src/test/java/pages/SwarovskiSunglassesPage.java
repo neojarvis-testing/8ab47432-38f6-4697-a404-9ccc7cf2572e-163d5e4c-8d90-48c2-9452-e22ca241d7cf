@@ -189,7 +189,7 @@ public class SwarovskiSunglassesPage {
         String data=helper.getText(SwarovskiHomePageLocators.verifyLogin);
         AssertionUtility.verifyText(test, data, "Login");
     }
-    public void testcase3(){
+    public void testSunglass(){
         hoverOnAccessories();
         clickOnSunglasses();
         verifyUrlSunglasses();

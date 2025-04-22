@@ -16,9 +16,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverHelper {
     public static WebDriver driver;
-
+    String home;
     public WebDriverHelper(WebDriver driver) {
         this.driver = driver;
+        home = driver.getWindowHandle();
     }
 
     /*
@@ -154,6 +155,10 @@ public class WebDriverHelper {
         }
     }
 
+    public void switchToHome(){
+        driver.switchTo().window(home);
+    }
+
     /*
      * A. Method name : getElements
      * B. Author name : Logisetty Nischith
@@ -233,5 +238,9 @@ public class WebDriverHelper {
         WebElement element = driver.findElement(path);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
+    }
+    public void navigateBack()
+    {
+        Base.driver.navigate().back();
     }
 }
