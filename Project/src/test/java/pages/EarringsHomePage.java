@@ -21,11 +21,20 @@ public class EarringsHomePage {
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
-
+    /*
+     * A. Method name : verifyLogo
+     * B. Author name : Logisetty Nischith
+     * C. Description : Method to verify the logo
+     * D. Return type : void
+     * E. Parameter : Null
+     */
     public void verifyLogo() {
-
+    try {
+        Screenshot.captureScreenShot("Logo Screenshot");
+    } catch (Exception e) {
+       e.printStackTrace(); 
     }
-
+    }
     /*
      * A. Method name : clickOnsearchIcon
      * B. Author name : Logisetty Nischith
@@ -35,9 +44,9 @@ public class EarringsHomePage {
      */
     public void clickOnsearchIcon() {
         try {
-            // helper.waitForElementToBeClickable(SwarovskiHomePageLocators.clickOnsearchIcon,
-            // 5);
+            helper.waitForElementToBeClickable(SwarovskiHomePageLocators.clickOnsearchIcon, 5);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnsearchIcon);
+            
             test.log(Status.INFO, "Click on Search Icon");
             LoggerHandler.logInfo("Clicked on Search Icon");
         } catch (Exception e) {
@@ -241,6 +250,7 @@ public class EarringsHomePage {
             Assert.assertTrue(data.contains("Description"));
             test.log(Status.PASS, "Verified text Description");
             LoggerHandler.logInfo("Verified text Description");
+            Screenshot.captureScreenShot("Description ScreenShot");
         } catch (Exception e) {
             test.log(Status.FAIL, "Not verified text Description");
             LoggerHandler.logError("Not verified text Description");
@@ -269,7 +279,6 @@ public class EarringsHomePage {
             verifyDescription();
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println(e.getMessage());
         }
     }

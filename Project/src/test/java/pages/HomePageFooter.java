@@ -5,7 +5,6 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.EarringsHomePageLocator;
 import uistore.HomePageFooterLocator;
 import utils.Base;
 import utils.LoggerHandler;
@@ -84,8 +83,8 @@ public class HomePageFooter {
     public void backward(){
         try {
             helper.navigateBack();
-            test.log(Status.PASS, "Navigate to back page");
-            LoggerHandler.logInfo("Navigated to back page");
+            test.log(Status.PASS, "navigate back to home page");
+            LoggerHandler.logInfo("navigated back to home page");
         } catch (Exception e) {
             test.log(Status.FAIL, "Couldnot Navigate to back page");
             LoggerHandler.logInfo("Couldnot Navigate to back page");
@@ -488,6 +487,7 @@ public class HomePageFooter {
             Assert.assertTrue(data.contains("MEMBERSHIP"));
             test.log(Status.PASS, "Verified text Membership");
             LoggerHandler.logInfo("Verified text Membership");
+            Screenshot.captureScreenShot("MemberShip ScreenShot");
         } catch (Exception e) {
             test.log(Status.FAIL, "Not verified text Membership");
             LoggerHandler.logError("Not verified text Membership");
