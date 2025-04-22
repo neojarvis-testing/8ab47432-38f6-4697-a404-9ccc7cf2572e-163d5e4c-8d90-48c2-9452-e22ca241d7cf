@@ -21,7 +21,7 @@ public class AssertionUtility {
             LoggerHandler.logInfo("Verified: "+expected);
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Can not Verify: "+expected);
-            LoggerHandler.logError("Verified: "+expected);
+            LoggerHandler.logError("Can not Verify: "+expected);
         }
 
     }

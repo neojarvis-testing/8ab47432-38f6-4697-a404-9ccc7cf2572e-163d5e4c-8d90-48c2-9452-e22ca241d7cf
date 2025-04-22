@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import pages.SwarovskiHomePage;
+import pages.SwarovskiWatchesPage;
 import pages.EarringsHomePage;
 import pages.HomePageFooter;
 import pages.SwarovskiBirdPage;
@@ -44,6 +46,18 @@ public class TestSwarovski extends Base {
         sd.Birds();
     }
 
+@Test(enabled = true)
+public void testpendants(){
+    test=report.createTest("Swarovski_testpendants");
+    SwarovskiHomePage swarovskiHomePage= new SwarovskiHomePage(test);
+    swarovskiHomePage.testPendants();
+}
+@Test(enabled = true)
+public void testwatches(){
+    test=report.createTest("Swarovski_testwatches");
+    SwarovskiWatchesPage swarovskiWatchesPage= new SwarovskiWatchesPage(test);
+    swarovskiWatchesPage.testWatches();
+}
     @Test
     public void test7() {
         EarringsHomePage ehp = new EarringsHomePage(test);
