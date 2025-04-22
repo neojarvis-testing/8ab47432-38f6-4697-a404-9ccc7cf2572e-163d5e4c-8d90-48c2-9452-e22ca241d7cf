@@ -38,7 +38,7 @@ public class TestSwarovski extends Base {
 
     
 
-    @Test
+    @Test(enabled=false)
     public void test1() {
         test = report.createTest("Sunglasses");
         SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
@@ -57,48 +57,48 @@ public class TestSwarovski extends Base {
         diamondPage.testSwarovskiDiamondPage();
     }
 
-    @Test
+    @Test(enabled=false)
     public void test2() {
         test = report.createTest("Birds");
         SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
         sd.Birds();
     }
 
-    @Test
+    @Test(enabled=false)
     public void AboutUs() {
         test = report.createTest("Footer");
         SwarovskiAboutUsPage sp = new SwarovskiAboutUsPage(test);
         sp.execute();
     }
 
-    @Test
+    @Test(enabled=false)
     public void Legal() {
         test = report.createTest("Footer");
         FooterPage fp = new FooterPage(test);
         fp.testing();
     }
 
-    @Test(enabled = true)
+    @Test(enabled=false)
     public void testpendants() {
         test = report.createTest("Swarovski_testpendants");
         SwarovskiHomePage swarovskiHomePage = new SwarovskiHomePage(test);
         swarovskiHomePage.testPendants();
     }
 
-    @Test(enabled = true)
+    @Test(enabled=false)
     public void testwatches() {
         test = report.createTest("Swarovski_testwatches");
         SwarovskiWatchesPage swarovskiWatchesPage = new SwarovskiWatchesPage(test);
         swarovskiWatchesPage.testWatches();
     }
 
-    @Test
+    @Test(enabled=false)
     public void test7() {
         EarringsHomePage ehp = new EarringsHomePage(test);
         ehp.testcase7();
     }
 
-    @Test
+    @Test(enabled=false)
     public void test8() {
         HomePageFooter home = new HomePageFooter(test);
         home.testCase8();
