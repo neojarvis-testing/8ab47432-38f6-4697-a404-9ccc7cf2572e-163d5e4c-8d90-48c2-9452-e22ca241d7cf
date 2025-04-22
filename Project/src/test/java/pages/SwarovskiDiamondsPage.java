@@ -39,6 +39,23 @@ public class SwarovskiDiamondsPage {
         }
     }
     /*
+     * Method Name: clickOnCategories
+     * Author name: Kartik Bameta
+     * Description: Performs click action on Categories.
+     * Parameters: none
+     * Return type: void
+     */
+    public void clickOnCategories(){
+        try {
+            helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnCategories,10);
+            helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnCategories);
+            test.log(Status.INFO,"Click on Categories");
+            LoggerHandler.logInfo("Click On Categories");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    /*
      * Method Name: clickOnEternity
      * Author name: Kartik Bameta
      * Description: Performs click action on Eternity.
@@ -54,6 +71,19 @@ public class SwarovskiDiamondsPage {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+     /*
+     * Method Name: clickOnRings
+     * Author name: Kartik Bameta
+     * Description: Performs click action on Rings.
+     * Parameters: none
+     * Return type: void
+     */
+    public void clickOnRings(){
+        helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnRings,10);
+        helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnRings);
+        test.log(Status.INFO, "Click on Rings");
+        LoggerHandler.logInfo("Click on Rings");
     }
     /*
      * Method Name: verifyURLText
@@ -120,32 +150,6 @@ public class SwarovskiDiamondsPage {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-    }
-     /*
-     * Method Name: clickOnCategories
-     * Author name: Kartik Bameta
-     * Description: Clicks on the first product that'll appear after clicking on the Show Products button.
-     * Parameters: none
-     * Return type: void
-     */
-     public void clickOnCategories(){
-        helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnCategories,10);
-        helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnCategories);
-        test.log(Status.INFO, "Click on Categories");
-        LoggerHandler.logInfo("Click on Categories");
-    }
-     /*
-     * Method Name: clickOnRings
-     * Author name: Kartik Bameta
-     * Description: Clicks on the first product that'll appear after clicking on the Show Products button.
-     * Parameters: none
-     * Return type: void
-     */
-    public void clickOnRings(){
-        helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnRings,10);
-        helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnRings);
-        test.log(Status.INFO, "Click on Rings");
-        LoggerHandler.logInfo("Click on Rings");
     }
     /*
      * Method Name: clickOnShowProducts
