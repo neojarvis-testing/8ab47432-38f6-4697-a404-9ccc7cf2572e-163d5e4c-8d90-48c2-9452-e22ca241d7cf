@@ -7,6 +7,7 @@ import uistore.SwarovskiWatchesLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SwarovskiWatchesPage {
@@ -92,6 +93,33 @@ private void clickOnFirstProduct(){
         LoggerHandler.logError("Can not Click on Close");
     }
 }
+private void clickOnAddToBag(){
+    try {
+        helper.waitForElementToBeVisible(SwarovskiWatchesLocators.clickOnAddToBag, 10);
+        helper.waitForElementToBeClickable(SwarovskiWatchesLocators.clickOnAddToBag, 10);
+        helper.clickOnElement(SwarovskiWatchesLocators.clickOnAddToBag);
+        test.log(Status.INFO, "Click on Close");
+        LoggerHandler.logInfo("Click on Close");
+        Screenshot.captureScreenShot("Add to bag");
+    } catch (Exception e) {
+        test.log(Status.FAIL, "Can not Click on Close");
+        LoggerHandler.logError("Can not Click on Close");
+    }
+}
+
+public void testWatches(){
+    hoverOverWatches();
+    clickOnImber();
+    clickOnCategories();
+    clickOnClose();
+    clickOnWishList();
+    verifyResult();
+    clickOnFirstProduct();
+    clickOnAddToBag();
+}
+
+
+
 
 
 

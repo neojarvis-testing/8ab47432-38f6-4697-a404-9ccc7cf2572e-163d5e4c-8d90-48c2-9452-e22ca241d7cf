@@ -10,6 +10,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import pages.SwarovskiHomePage;
+import pages.SwarovskiWatchesPage;
 import utils.Base;
 import utils.Reporter;
 
@@ -37,11 +38,17 @@ public void closeBrowser(){
     Base.driver.quit();
 }
 
-@Test
-public void test1(){
-    test=reports.createTest("Swarovski_testcase1");
+@Test(enabled = true)
+public void testpendants(){
+    test=reports.createTest("Swarovski_testpendants");
     SwarovskiHomePage swarovskiHomePage= new SwarovskiHomePage(test);
     swarovskiHomePage.testPendants();
+}
+@Test(enabled = true)
+public void testwatches(){
+    test=reports.createTest("Swarovski_testwatches");
+    SwarovskiWatchesPage swarovskiWatchesPage= new SwarovskiWatchesPage(test);
+    swarovskiWatchesPage.testWatches();
 }
 
 }
