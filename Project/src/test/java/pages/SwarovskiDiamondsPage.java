@@ -9,6 +9,7 @@ import uistore.SwarovskiDiamondPageLocator;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -170,6 +171,7 @@ public class SwarovskiDiamondsPage {
         clickOnFirstProduct();
         verifySizeKeyword();
         Screenshot.captureScreenShot("Eternity Rings");
+         Reporter.logScreenshottoReport("Eternity Rings", test, "attached to report");
     }
 
 }

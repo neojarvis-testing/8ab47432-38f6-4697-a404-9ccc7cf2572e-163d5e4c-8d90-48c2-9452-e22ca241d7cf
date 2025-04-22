@@ -29,7 +29,7 @@ public class TestSwarovski extends Base {
     }
      @Test
     public void testCase5(){
-        test=report.createTest(ExcelReader.readExcelData(System.getProperty("user.dir")+"/testdata/SwarovskiExcelSheet.xlsx","Seet1",6,4));
+        test=report.createTest("Test Case 5");
         SwarovskiGiftsPage giftsPage = new SwarovskiGiftsPage(test);
         giftsPage.testSwarovskiGiftsPage();
     }

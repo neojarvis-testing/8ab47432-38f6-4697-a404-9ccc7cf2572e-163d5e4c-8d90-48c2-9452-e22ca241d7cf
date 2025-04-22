@@ -9,6 +9,7 @@ import uistore.SwarovskiHomePageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -223,6 +224,7 @@ public class SwarovskiGiftsPage {
         clickOnFirstProduct();
         verify();
         Screenshot.captureScreenShot("Gifts");
+        Reporter.logScreenshottoReport("Gifts", test, "attached to report");
     }
 
 
