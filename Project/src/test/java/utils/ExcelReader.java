@@ -53,6 +53,13 @@ public class ExcelReader {
 
         return null;
     }
+     /*
+     * Method Name: readExcelData
+     * Author name: Kartik Bameta
+     * Description: This method reads a specific cell from an Excel sheet using the Apache POI library and returns its value as a String.
+     * Parameters: String path, String name,  int rows, int cols
+     * Return type: String
+     */
     public static String readExcelData(String path,String name, int rows, int cols) {
 		try {
 			 file=new FileInputStream(path);

@@ -5,32 +5,66 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import pages.FooterPage;
+import pages.SwarovskiAboutUsPage;
+import utils.Base;
+import utils.Reporter;
+
+import pages.SwarovskiDiamondsPage;
+import pages.SwarovskiGiftsPage;
 import pages.SwarovskiHomePage;
 import pages.SwarovskiWatchesPage;
 import pages.EarringsHomePage;
 import pages.HomePageFooter;
 import pages.SwarovskiBirdPage;
 import pages.SwarovskiSunglassesPage;
-import utils.Base;
-import utils.Reporter;
 
 public class TestSwarovski extends Base {
     public static ExtentTest test;
     public static ExtentReports report;
-
     @BeforeClass
-    public void generateReport() {
-        report = Reporter.createExtentReport("Report");
+    public void generate(){
+        report = Reporter.createExtentReport("Swarovski Test");
     }
-
     @BeforeMethod
-    public void openb() {
+    public void open(){
         openBrowser();
     }
+     
+    
+@Test
+public void testswarovskiGiftsPage(){
+    test=report.createTest("Test Case 5");
+    SwarovskiGiftsPage giftsPage = new SwarovskiGiftsPage(test);
+    giftsPage.testSwarovskiGiftsPage();
+}
+@Test
+public void testswarovskiDiamondPage(){
+        test=report.createTest("Test Case 6");
+    SwarovskiDiamondsPage diamondPage = new SwarovskiDiamondsPage(test);
+    diamondPage.testSwarovskiDiamondPage();
+}
+
+
+
+
+@Test
+public void AboutUs() {
+    test = report.createTest("Footer");
+    SwarovskiAboutUsPage sp = new SwarovskiAboutUsPage(test);
+    sp.execute();
+}
+
+@Test
+public void Legal() {
+    test = report.createTest("Footer");
+    FooterPage fp = new FooterPage(test);
+    fp.testing();
+}
+
 
 @Test
 public void testsunglass() {
@@ -38,14 +72,14 @@ public void testsunglass() {
     SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
     s.testSunglass();
 }
-
+    
 @Test
 public void testBirds() {
     test = report.createTest("Birds");
     SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
     sd.Birds();
 }
-
+    
 @Test
 public void testpendants(){
     test=report.createTest("Swarovski_testpendants");
