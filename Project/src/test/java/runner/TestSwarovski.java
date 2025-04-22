@@ -50,6 +50,7 @@ public void testswarovskiDiamondPage(){
 
 
 
+
 @Test
 public void AboutUs() {
     test = report.createTest("Footer");
@@ -97,7 +98,7 @@ public void testearings() {
     EarringsHomePage ehp = new EarringsHomePage(test);
     ehp.testEarings();
 }
-    
+
 @Test
 public void testFooter() {
     test=report.createTest("testFooter");
