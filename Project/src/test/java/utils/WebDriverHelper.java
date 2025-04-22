@@ -16,9 +16,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverHelper {
     public static WebDriver driver;
-
+    String home;
     public WebDriverHelper(WebDriver driver) {
         this.driver = driver;
+        home = driver.getWindowHandle();
     }
 
     /*
@@ -152,6 +153,10 @@ public class WebDriverHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void switchToHome(){
+        driver.switchTo().window(home);
     }
 
     /*
