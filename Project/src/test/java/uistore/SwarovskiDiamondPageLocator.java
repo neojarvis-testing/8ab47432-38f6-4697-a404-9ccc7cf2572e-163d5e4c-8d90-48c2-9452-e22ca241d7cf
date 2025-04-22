@@ -3,6 +3,8 @@ package uistore;
 import org.openqa.selenium.By;
 
 public class SwarovskiDiamondPageLocator {
+
+    //Kartik Bameta
     public static By hoverOnSwarovskiCreatedDiamonds = By.xpath("(//span[text()='Swarovski Created Diamonds'])[1]");
     public static By clickOnEternity = By.cssSelector("a[id='navSCDEternityCollectionLinkUSCA'][rel='Eternity']>span[class='swa-cms-link-component__content']");
     public static By clickOnCategories = By.id("filter-dropdown-count-category");

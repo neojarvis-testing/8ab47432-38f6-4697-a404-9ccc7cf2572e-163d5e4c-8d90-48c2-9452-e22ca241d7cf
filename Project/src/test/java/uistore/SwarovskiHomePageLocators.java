@@ -3,6 +3,7 @@ package uistore;
 import org.openqa.selenium.By;
 
 public class SwarovskiHomePageLocators {
+    //Kartik Bameta
     public static By hoverOnGifts = By.xpath("(//span[text()='Gifts'])[1]");
     public static By clickOnWeddingGifts = By.cssSelector("div[data-text-track='Gifts > Occasions > Wedding gifts']>a[rel='Wedding gifts']");
     public static By clickOnCategories = By.xpath("//span[@class='swa-filter-category-desktop__filter-name swa-label-sans--small' and contains(text(),'Categories')]");
