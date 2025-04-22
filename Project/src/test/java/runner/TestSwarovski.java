@@ -5,43 +5,50 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.SwarovskiHomePage;
+import pages.SwarovskiBirdPage;
+import pages.SwarovskiSunglassesPage;
 import utils.Base;
 import utils.Reporter;
 
-public class TestSwarovski {
+public class TestSwarovski extends Base {
+    public static ExtentTest test;
+    public static ExtentReports report;
 
-public static ExtentTest test;
-public static ExtentReports reports;
+    @BeforeClass
+    public void generateReport() {
+        report = Reporter.createExtentReport("Report");
+    }
 
-@BeforeClass
-public void openReport(){
-    reports=Reporter.createExtentReport("Swarovski_Report");
-}
+    @BeforeMethod
+    public void openb() {
+        openBrowser();
+    }
 
-@AfterClass
-public void closeReport(){
-    reports.flush();
-}
+    @Test
+    public void test1() {
+        test = report.createTest("Sunglasses");
+        SwarovskiSunglassesPage s = new SwarovskiSunglassesPage(test);
+        s.testcase3();
+    }
 
-@BeforeMethod
-public void launchBrowser(){
-    Base.openBrowser();
-}
-@AfterMethod
-public void closeBrowser(){
-    Base.driver.quit();
-}
+    @Test
+    public void test2() {
+        test = report.createTest("Birds");
+        SwarovskiBirdPage sd = new SwarovskiBirdPage(test);
+        sd.Birds();
+    }
 
-@Test
-public void test1(){
-    test=reports.createTest("Swarovski_testcase1");
-    SwarovskiHomePage swarovskiHomePage= new SwarovskiHomePage(test);
-    swarovskiHomePage.testPendants();
-}
+    @AfterMethod
+    public void close() {
+        driver.quit();
+    }
+
+    @AfterClass
+    public void flushi() {
+        report.flush();
+    }
 
 }
