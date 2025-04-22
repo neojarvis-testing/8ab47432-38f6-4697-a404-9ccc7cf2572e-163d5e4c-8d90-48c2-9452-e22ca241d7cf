@@ -5,10 +5,11 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.SwarovskiHomePageLocators;
+import uistore.SwarovskiAboutUsPageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -22,7 +23,7 @@ public class FooterPage {
     public void scrollToFooter()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnTermsOfUse);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnTermsOfUse);
             test.log(Status.INFO,"scroll down to footer");
             LoggerHandler.logInfo("scroll down to footer");
         } catch (Exception e) {
@@ -34,9 +35,9 @@ public class FooterPage {
     public void clickOnTermsOfUse()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnTermsOfUse);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnTermsOfUse, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnTermsOfUse);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnTermsOfUse);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnTermsOfUse, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnTermsOfUse);
             test.log(Status.PASS,"Clicked on TermsOfUse");
             LoggerHandler.logInfo("Clicked on TermsOfUse");
         } catch (Exception e) {
@@ -58,9 +59,9 @@ public class FooterPage {
     public void clickOnTermsAndConditions()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnTermsAndConditions);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnTermsAndConditions, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnTermsAndConditions);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnTermsAndConditions);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnTermsAndConditions, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnTermsAndConditions);
             test.log(Status.PASS,"navigate back to home page");
             LoggerHandler.logInfo("navigate back to home page");
         } catch (Exception e) {
@@ -82,9 +83,9 @@ public class FooterPage {
     public void clickOnPrivacyPolicy()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnPrivacyPolicy);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnPrivacyPolicy, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnPrivacyPolicy);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnPrivacyPolicy);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnPrivacyPolicy, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnPrivacyPolicy);
             test.log(Status.PASS,"Clicked on PrivacyPolicy ");
             LoggerHandler.logInfo("Clicked on PrivacyPolicy");
         } catch (Exception e) {
@@ -106,9 +107,9 @@ public class FooterPage {
     public void clickOnImprint()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnImprint);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnImprint, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnImprint);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnImprint);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnImprint, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnImprint);
             test.log(Status.PASS,"Clicked on Imprint ");
             LoggerHandler.logInfo("Clicked on Imprint");
         } catch (Exception e) {
@@ -130,9 +131,9 @@ public class FooterPage {
     public void clickOnAccessibility()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnAccesbilityStatement);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAccesbilityStatement, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnAccesbilityStatement);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnAccesbilityStatement);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnAccesbilityStatement, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnAccesbilityStatement);
             test.log(Status.PASS,"Clicked on Accessibility ");
             LoggerHandler.logInfo("Clicked on Accessibility");
         } catch (Exception e) {
@@ -154,9 +155,9 @@ public class FooterPage {
     public void clickOnCaliforniaSupplyChainAct()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnCaliforniasupplyclainact);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCaliforniasupplyclainact, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnCaliforniasupplyclainact);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnCaliforniasupplyclainact);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnCaliforniasupplyclainact, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnCaliforniasupplyclainact);
             test.log(Status.PASS,"Clicked on CaliforniaSupplyChainAct ");
             LoggerHandler.logInfo("Clicked on CaliforniaSupplyChainAct");
         } catch (Exception e) {
@@ -178,9 +179,9 @@ public class FooterPage {
     public void clickOnCaliforniaPrivacyRights()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnCaliforniaPrivacyRights);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCaliforniaPrivacyRights, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnCaliforniaPrivacyRights);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnCaliforniaPrivacyRights);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnCaliforniaPrivacyRights, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnCaliforniaPrivacyRights);
             test.log(Status.PASS,"Clicked on CaliforniaPrivacyRights");
             LoggerHandler.logInfo("Clicked on CaliforniaPrivacyRights");
         } catch (Exception e) {
@@ -201,21 +202,16 @@ public class FooterPage {
     }
     public void verifyLegal()
     {
-        String str=helper.getText(SwarovskiHomePageLocators.Label);
+        String str=helper.getText(SwarovskiAboutUsPageLocators.Label);
         Assert.assertEquals(str, "LEGAL");
         test.log(Status.PASS,"Legal verified");
         LoggerHandler.logInfo("Legal verified");
-        Screenshot.captureScreenShot("Legal verified");
+        Screenshot.captureScreenShot("Swarovski");
+        Reporter.logScreenshottoReport("Swarovski", test, "Legal is verified");
+
 
     }
-
-
-
-
-
-
-
-    public void testcase2()
+    public void testing()
     {
         scrollToFooter();
         clickOnTermsOfUse();

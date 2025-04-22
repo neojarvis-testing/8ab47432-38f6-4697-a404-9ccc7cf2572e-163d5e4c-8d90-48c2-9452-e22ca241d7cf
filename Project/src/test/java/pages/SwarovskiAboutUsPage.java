@@ -6,24 +6,25 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 
-import uistore.SwarovskiHomePageLocators;
+import uistore.SwarovskiAboutUsPageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
-public class SwarovskiHomePage {
+public class SwarovskiAboutUsPage {
     public static WebDriverHelper helper;
     public static ExtentTest test;
-    public SwarovskiHomePage(ExtentTest test){
+    public SwarovskiAboutUsPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
     }
     public void scrollToAboutswarovski()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnAboutSwarovski);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnAboutSwarovski);
             test.log(Status.PASS,"scroll to About Swarovski");
             LoggerHandler.logInfo("scroll to About Swarovski");
         } catch (Exception e) {
@@ -35,8 +36,8 @@ public class SwarovskiHomePage {
     public void clickOnAboutSwarovski()
     {
         try {
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAboutSwarovski, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnAboutSwarovski);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnAboutSwarovski, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnAboutSwarovski);
             test.log(Status.PASS,"Clicked on About Swarovski");
             LoggerHandler.logInfo("Clicked on About Swarovski");
         } catch (Exception e) {
@@ -58,9 +59,9 @@ public class SwarovskiHomePage {
     public void clickOnSustainability()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnSustainability);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnSustainability, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnSustainability);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnSustainability);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnSustainability, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnSustainability);
             test.log(Status.PASS,"Clicked on Sustainability");
             LoggerHandler.logInfo("Clicked on Sustainability");
         } catch (Exception e) {
@@ -82,9 +83,9 @@ public class SwarovskiHomePage {
     public void clickOnJobsAndCareer()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnJobsAndCareer);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnJobsAndCareer, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnJobsAndCareer);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnJobsAndCareer);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnJobsAndCareer, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnJobsAndCareer);
             test.log(Status.PASS,"Clicked on JobsAndCareer");
             LoggerHandler.logInfo("Clicked on JobsAndCareer");
         } catch (Exception e) {
@@ -106,9 +107,9 @@ public class SwarovskiHomePage {
     public void clickOnAlumniCommunityAndSwitch()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnAlumniCommunity);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAlumniCommunity, 10);
-            helper.switchWindow(SwarovskiHomePageLocators.clickOnAlumniCommunity);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnAlumniCommunity);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnAlumniCommunity, 10);
+            helper.switchWindow(SwarovskiAboutUsPageLocators.clickOnAlumniCommunity);
             test.log(Status.PASS,"Clicked on AlumniCommunity");
             LoggerHandler.logInfo("Clicked on AlumniCommunity");
         } catch (Exception e) {
@@ -130,9 +131,9 @@ public class SwarovskiHomePage {
     public void clickOnCorporategifts()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnCorporategifts);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCorporategifts, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnCorporategifts);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnCorporategifts);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnCorporategifts, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnCorporategifts);
             test.log(Status.PASS,"Clicked on Corporategifts");
             LoggerHandler.logInfo("Clicked on Corporategifts");
         } catch (Exception e) {
@@ -154,9 +155,9 @@ public class SwarovskiHomePage {
     public void clickForProfessional()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnForProfessional);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnForProfessional, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnForProfessional);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnForProfessional);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnForProfessional, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnForProfessional);
             test.log(Status.PASS,"Clicked on ForProfessional");
             LoggerHandler.logInfo("Clicked on ForProfessional");
         } catch (Exception e) {
@@ -178,9 +179,9 @@ public class SwarovskiHomePage {
     public void clickOnSitemap()
     {
         try {
-            helper.scrolltoElement(SwarovskiHomePageLocators.clickOnSitemap);
-            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnSitemap, 10);
-            helper.clickOnElement(SwarovskiHomePageLocators.clickOnSitemap);
+            helper.scrolltoElement(SwarovskiAboutUsPageLocators.clickOnSitemap);
+            helper.waitForElementToBeVisible(SwarovskiAboutUsPageLocators.clickOnSitemap, 10);
+            helper.clickOnElement(SwarovskiAboutUsPageLocators.clickOnSitemap);
             test.log(Status.PASS,"Clicked on Sitemap");
             LoggerHandler.logInfo("Clicked on Sitemap");
         } catch (Exception e) {
@@ -201,18 +202,16 @@ public class SwarovskiHomePage {
     }
     public void verifyAboutUs()
     {
-        String str=helper.getText(SwarovskiHomePageLocators.clickOnAboutUs);
+        String str=helper.getText(SwarovskiAboutUsPageLocators.clickOnAboutUs);
         Assert.assertEquals(str, "ABOUT US");
         test.log(Status.PASS,"About verified");
         LoggerHandler.logInfo("About verified");
         Screenshot.captureScreenShot("About verified");
+        Reporter.logScreenshottoReport(str, test, "About");
+
 
     }
-
-    
-
-
-    public void testcase1()
+    public void execute()
     {
         scrollToAboutswarovski();
         clickOnAboutSwarovski();
@@ -230,11 +229,9 @@ public class SwarovskiHomePage {
         clickOnCorporategifts();
         verifyCorporategiftsTitle();
         verifyCorporategiftsUrl();
-
         clickForProfessional();
         verifyForProfessionalTitle();
         verifyForProfessionalUrl();
-
         clickOnSitemap();
         verifySitemapTitle();
         verifySitemapUrl();

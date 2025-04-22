@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class SwarovskiHomePageLocators {
+public class SwarovskiAboutUsPageLocators {
     public static By clickOnAboutSwarovski=By.xpath("(//span[text()='About Swarovski'])[8]");
     public static By clickOnSustainability=By.xpath("(//span[text()='Sustainability'])[8]");
     public static By clickOnJobsAndCareer=By.xpath("(//span[text()='Jobs & Career'])[8]");

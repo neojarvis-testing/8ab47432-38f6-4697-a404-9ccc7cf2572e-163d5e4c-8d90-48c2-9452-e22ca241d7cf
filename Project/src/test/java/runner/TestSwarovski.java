@@ -7,7 +7,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.SwarovskiHomePage;
+import pages.FooterPage;
+import pages.SwarovskiAboutUsPage;
 import utils.Base;
 import utils.Reporter;
 public class TestSwarovski extends Base {
@@ -22,10 +23,16 @@ public class TestSwarovski extends Base {
         openBrowser();
     }
     @Test
-    public void test1(){
+    public void AboutUs(){
     test=report.createTest("Footer");
-    SwarovskiHomePage sp=new SwarovskiHomePage(test);
-    sp.testcase1();
+    SwarovskiAboutUsPage sp=new SwarovskiAboutUsPage(test);
+    sp.execute();
+    }   
+    @Test
+    public void Legal(){
+    test=report.createTest("Footer");
+    FooterPage fp=new FooterPage(test);
+    fp.testing();
     }    
     @AfterMethod
     public void close(){

@@ -2,7 +2,9 @@ package utils;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
- 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.imageio.ImageIO;
  
 //import org.apache.commons.io.FileUtils;
@@ -22,7 +24,8 @@ public class Screenshot extends Base {
      * e.Return Type: void will be the return type.
      */
     public static void captureScreenShot(String filename) {
-        String name = filename +"_" + ".png";
+        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String name = filename +"_" +timestamp + ".png";
         ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
         File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
@@ -62,7 +65,9 @@ public class Screenshot extends Base {
             if (!screenshotsDir.exists()) {
                 screenshotsDir.mkdirs();
             }
+            String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             File target = new File(screenshotsDir, filename + ".png");
+
             ImageIO.write(img, "png", target);
          // Reset element background color to default after screenshot capture
             js.executeScript("arguments[0].style.backgroundColor='';", element);
@@ -80,7 +85,8 @@ public class Screenshot extends Base {
      */
     public static void captureSpecificScreenShot(String filename,By locator) {
     	WebElement element=driver.findElement(locator);
-        String name = filename + ".png";
+        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String name = filename + timestamp + ".png";
         File file = element.getScreenshotAs(OutputType.FILE);
         File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
         if (!screenshotsDir.exists()) {
