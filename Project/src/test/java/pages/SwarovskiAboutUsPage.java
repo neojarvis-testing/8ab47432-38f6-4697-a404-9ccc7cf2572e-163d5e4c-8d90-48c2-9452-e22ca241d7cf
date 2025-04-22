@@ -21,6 +21,13 @@ public class SwarovskiAboutUsPage {
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
     }
+    /*
+     * a.Method Name: scrollToAboutswarovski
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to scroll down to Aboutswarovski .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void scrollToAboutswarovski()
     {
         try {
@@ -33,6 +40,13 @@ public class SwarovskiAboutUsPage {
         }
 
     }
+    /*
+     * a.Method Name: clickOnAboutSwarovski
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to click On About Swarovski .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickOnAboutSwarovski()
     {
         try {
@@ -45,17 +59,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on About Swarovski");
         }  
     }
+    /*
+     * a.Method Name: verifyAboutSwarovskiTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify AboutSwarovski Title .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyAboutSwarovskiTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "About Swarovski | Swarovski US");
     }
+    /*
+     * a.Method Name: verifyAboutSwarovskiUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify AboutSwarovski Url .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyAboutSwarovskiUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-brand/");
         helper.navigateBack();
     }
+    /*
+     * a.Method Name: clickOnSustainability
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to click On Sustainability .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickOnSustainability()
     {
         try {
@@ -69,17 +104,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on Sustainability");
         }
     }
+    /*
+     * a.Method Name: verifySustainabilityTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify Sustainability Title .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifySustainabilityTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "Sustainability and Corporate Responsibility  | Swarovski US");
     }
+    /*
+     * a.Method Name: verifySustainabilityUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify Sustainability Url .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifySustainabilityUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-sustainability/");
         helper.navigateBack();
     }
+    /*
+     * a.Method Name: clickOnJobsAndCareer
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to click On JobsAndCareer .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickOnJobsAndCareer()
     {
         try {
@@ -93,17 +149,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on JobsAndCareer");
         }
     }
+    /*
+     * a.Method Name: verifyJobsAndCareerTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify JobsAndCareer Title .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyJobsAndCareerTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "Career at Swarovski | Job opportunies | Swarovski US");
     }
+    /*
+     * a.Method Name: verifyJobsAndCareerUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify JobsAndCareer Url .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyJobsAndCareerUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-careers/");
         helper.navigateBack();
     }
+    /*
+     * a.Method Name: clickOnAlumniCommunityAndSwitch
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to click On AlumniCommunity And Switch the tab .
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickOnAlumniCommunityAndSwitch()
     {
         try {
@@ -117,17 +194,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on AlumniCommunity");
         }
     }
+    /*
+     * a.Method Name: verifyAlumniCommunityTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify AlumniCommunity Title.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyAlumniCommunityTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "Landing Page - Swarovski");
     }
+    /*
+     * a.Method Name: verifyAlumniCommunityUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to  verify AlumniCommunity Url.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyAlumniCommunityUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://alumni.swarovski.com/alumni/");
         helper.switchToHome();
     }
+    /*
+     * a.Method Name: clickOnCorporategifts
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to  click On Corporategifts.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickOnCorporategifts()
     {
         try {
@@ -141,17 +239,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on Corporategifts");
         }
     }
+    /*
+     * a.Method Name: verifyCorporategiftsTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to  verify Corporategifts Title.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyCorporategiftsTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "Swarovski Corporate Gifts & Business Gifts | Swarovski US");
     }
+    /*
+     * a.Method Name: verifyCorporategiftsUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify Corporategifts Url.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyCorporategiftsUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-corporate-gifts/");
         helper.navigateBack();
     }
+    /*
+     * a.Method Name: clickForProfessional
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to click For Professional.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickForProfessional()
     {
         try {
@@ -165,17 +284,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on ForProfessional");
         }
     }
+    /*
+     * a.Method Name: verifyForProfessionalTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify ForProfessional Page Title.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyForProfessionalTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "Swarovski for Professionals | Swarovski US");
     }
+    /*
+     * a.Method Name: verifyForProfessionalUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify ForProfessional Page Url.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyForProfessionalUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-professionals/");
         helper.navigateBack();
     }
+    /*
+     * a.Method Name: clickOnSitemap
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to click On Sitemap.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void clickOnSitemap()
     {
         try {
@@ -189,17 +329,38 @@ public class SwarovskiAboutUsPage {
             LoggerHandler.logError("Unable to Click on Sitemap");
         }
     }
+    /*
+     * a.Method Name: verifySitemapTitle
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify Sitemap Title.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifySitemapTitle()
     {
         String str=Base.driver.getTitle();
         AssertionUtility.verifyText(test, str, "Sitemap | Swarovski US");
     }
+    /*
+     * a.Method Name: verifySitemapUrl
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify Sitemap Url.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifySitemapUrl()
     {
         String str = Base.driver.getCurrentUrl();
         AssertionUtility.verifyText(test, str, "https://www.swarovski.com/en-US/s-html-sitemap/");
         helper.navigateBack();
     }
+    /*
+     * a.Method Name: verifyAboutUs
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to verify AboutUs.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void verifyAboutUs()
     {
         String str=helper.getText(SwarovskiAboutUsPageLocators.clickOnAboutUs);
@@ -208,9 +369,14 @@ public class SwarovskiAboutUsPage {
         LoggerHandler.logInfo("About verified");
         Screenshot.captureScreenShot("About verified");
         Reporter.logScreenshottoReport(str, test, "About");
-
-
     }
+    /*
+     * Method Name: execute
+     * Author name: Sarika
+     * Description: Calls all the methods defined above and this method will be called inside runner page for execution.
+     * Parameters: none
+     * Return type: void
+     */
     public void execute()
     {
         scrollToAboutswarovski();

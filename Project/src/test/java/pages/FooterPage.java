@@ -20,6 +20,13 @@ public class FooterPage {
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
     }
+    /*
+     * a.Method Name: scrollToFooter
+     * b.Author Name: Sarika
+     * c.Description: This method  is used to scroll To Terms of use.
+     * d.Parameters: none.
+     * e.Return Type: void.
+     */
     public void scrollToFooter()
     {
         try {
