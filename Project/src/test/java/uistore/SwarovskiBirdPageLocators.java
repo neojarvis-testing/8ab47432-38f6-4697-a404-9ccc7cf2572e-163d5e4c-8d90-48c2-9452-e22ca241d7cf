@@ -3,6 +3,7 @@ package uistore;
 import org.openqa.selenium.By;
 
 public class SwarovskiBirdPageLocators {
+    //Poojitha
     public static By clickOnMetal=By.xpath("(//span[text()='Metal'])[2]");
     public static By clickOnResults=By.xpath("//span[contains(text(),'Show 15 products')]");
     public static By clickOnFirstProduct=By.xpath("//span[text()='Idyllia Sugarbird and Cactus Flower']");

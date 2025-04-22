@@ -48,8 +48,11 @@ public class SwarovskiBirdPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnBirds, 10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnBirds);
+            String data=Base.driver.getCurrentUrl();
+            Assert.assertTrue(data.contains("Bird"));
             LoggerHandler.logInfo("click On clickOnBirds");
             test.log(Status.PASS, "click On clickOnBirds");
+
         }
         catch(Exception e){
             e.printStackTrace();
@@ -134,7 +137,6 @@ public class SwarovskiBirdPage {
             test.log(Status.PASS, "click On First Product");
         }
         catch(Exception e){
-            e.printStackTrace();
             LoggerHandler.logError(" not click On FirstProduct");
             test.log(Status.FAIL,"not click On FirstProduct");
         }
@@ -154,7 +156,6 @@ public class SwarovskiBirdPage {
             test.log(Status.PASS, "click On  FindInstore");
         }
         catch(Exception e){
-            e.printStackTrace();
             LoggerHandler.logError(" not click On  FindInstores");
             test.log(Status.FAIL,"not click  FindInstores");
         }
