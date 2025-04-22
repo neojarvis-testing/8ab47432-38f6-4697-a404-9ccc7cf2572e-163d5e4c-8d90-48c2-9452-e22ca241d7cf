@@ -6,12 +6,12 @@ public class SwarovskiDiamondPageLocator {
 
     //Kartik Bameta
     public static By hoverOnSwarovskiCreatedDiamonds = By.xpath("(//span[text()='Swarovski Created Diamonds'])[1]");
-    public static By clickOnEternity = By.cssSelector("a[id='navSCDEternityCollectionLinkUSCA'][rel='Eternity']>span[class='swa-cms-link-component__content']");
-    public static By clickOnCategories = By.id("filter-dropdown-count-category");
-    public static By clickOnRings = By.xpath("(//li[@class='swa-filter-list-item']/child::input[@class='swa-filter-list-item__input js-filter-reload' and @id='filter-category-0106']/following-sibling::label[contains(text(),'Rings')])[2]");
+    public static By clickOnEternity = By.cssSelector("a[rel='Eternity']");
+    public static By clickOnCategories = By.cssSelector("div[data-filter-id='category']>span[class='swa-filter-category-desktop__filter-name swa-label-sans--small']");
+    public static By clickOnRings = By.cssSelector("div[id='dropdown-facet-value-list-category']>li[class='swa-filter-list-item']>label[for='filter-category-0106']");
     public static By clickOnShowProducts = By.cssSelector("button[class='swa-button swa-button--large swa-button--no-margin swa-button-primary-black swa-filter-button swa-filter-button--show swa-button--apply-all']>span[class='swa-button__content']>span[class='swa-button__text swa-label-sans--medium-strong']");
-    public static By clickOnMaterialDropDown = By.id("filter-dropdown-count-product_material");
-    public static By clickOnSterlingSilver = By.xpath("(//label[@for='filter-product_material-material-sterling-silver']/child::span[text()='Sterling silver'])[2]");
+    public static By clickOnMaterialDropDown = By.cssSelector("div[class='swa-filter-category-desktop__item js-swa-filter-dropdown-trigger']>span[class='swa-filter-category-desktop__filter-name swa-label-sans--small swa-label-sans--small-strong']");
+    public static By clickOnSterlingSilver = By.cssSelector("li[class='swa-filter-list-item swa-filter-list-item--size'][style='-ms-grid-row: 4; -ms-grid-column: 1; grid-row: 4; grid-column: 1;']>label[class='swa-size-label swa-filter-list-item__label swa-label-sans--small'][for='filter-product_material-material-sterling-silver'][data-code='material-sterling-silver']>span[class='swa-size-caption']");
     public static By clickOnShowButton = By.cssSelector("button[class='swa-button swa-button--large swa-button--no-margin swa-button-primary-black swa-filter-button swa-filter-button--show swa-button--apply-all']>span[class='swa-button__content']");
     public static By clickOnFirstRing = By.cssSelector("a[data-gtm-product-id='M5697430']>div[class='swa-product-tile-plp__information']>p>span[class='swa-product-tile-plp__information__title swa-product-sans--name']");
     public static By checkSizeText = By.xpath("//h6[contains(text(),'Select size')]");
