@@ -148,9 +148,9 @@ public class SwarovskiDiamondsPage {
         LoggerHandler.logInfo("Click on Rings");
     }
     /*
-     * Method Name: clickOnRings
+     * Method Name: clickOnShowProducts
      * Author name: Kartik Bameta
-     * Description: Clicks on the first product that'll appear after clicking on the Show Products button.
+     * Description: Clicks on the Show product button and shows a list of all products after applying certain filters.
      * Parameters: none
      * Return type: void
      */
@@ -165,7 +165,7 @@ public class SwarovskiDiamondsPage {
         }
     }
     /*
-     * Method Name: clickOnFirstProduct
+     * Method Name: clickOnFirstProductRing
      * Author name: Kartik Bameta
      * Description: Clicks on the first product that'll appear after clicking on the Show Products button.
      * Parameters: none
