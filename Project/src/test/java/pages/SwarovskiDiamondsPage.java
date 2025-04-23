@@ -32,10 +32,11 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.hoverOnSwarovskiCreatedDiamonds,10);
             helper.hoverElement(SwarovskiDiamondPageLocator.hoverOnSwarovskiCreatedDiamonds);
-            test.log(Status.INFO, "Hover over Swarovski Created Diamonds");
+            test.log(Status.PASS, "Hover over Swarovski Created Diamonds");
             LoggerHandler.logInfo("Hover over Swarovski Created Diamonds");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL, "Could not Hover over Swarovski Created Diamonds");
+            LoggerHandler.logError("Could not Hover over Swarovski Created Diamonds");
         }
     }
     /*
@@ -49,10 +50,11 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnCategories,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnCategories);
-            test.log(Status.INFO,"Click on Categories");
+            test.log(Status.PASS,"Click on Categories");
             LoggerHandler.logInfo("Click On Categories");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL, "could not Click on Categories");
+            LoggerHandler.logError("could not Click on Categories");
         }
     }
     /*
@@ -66,10 +68,13 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnEternity,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnEternity);
-            test.log(Status.INFO,"Click on Eternity");
+            String str = Base.driver.getTitle();
+            AssertionUtility.verifyCondition(test,str,"Eternity rings, bands, and necklaces | Swarovski Created Diamonds");
+            test.log(Status.PASS,"Click on Eternity");
             LoggerHandler.logInfo("Click On Eternity");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on Eternity");
+            LoggerHandler.logError("could not Click On Eternity");
         }
     }
      /*
@@ -80,10 +85,15 @@ public class SwarovskiDiamondsPage {
      * Return type: void
      */
     public void clickOnRings(){
-        helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnRings,10);
-        helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnRings);
-        test.log(Status.INFO, "Click on Rings");
-        LoggerHandler.logInfo("Click on Rings");
+        try {
+            helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnRings,10);
+            helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnRings);
+            test.log(Status.PASS, "Click on Rings");
+            LoggerHandler.logInfo("Click on Rings");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "could not Click on Rings");
+            LoggerHandler.logError("could not Click on Rings");
+        }
     }
     /*
      * Method Name: verifyURLText
@@ -96,8 +106,11 @@ public class SwarovskiDiamondsPage {
         try {
             String str = Base.driver.getCurrentUrl();
             AssertionUtility.verifyCondition(test, str, "collection-eternity");
+            test.log(Status.PASS,"URL Text verified");
+            LoggerHandler.logInfo("URL Text verified");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"Could not verify URL text");
+            LoggerHandler.logError("Could not verify URL text");
         }
     }
     /*
@@ -111,10 +124,11 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnMaterialDropDown,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnMaterialDropDown);
-            test.log(Status.INFO,"Click on Material");
+            test.log(Status.PASS,"Click on Material");
             LoggerHandler.logInfo("Click On Material");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on Material");
+            LoggerHandler.logError("could not Click On Material");
         }
     }
     /*
@@ -128,10 +142,11 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnSterlingSilver,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnSterlingSilver);
-            test.log(Status.INFO,"Click on Sterling Silver");
+            test.log(Status.PASS,"Click on Sterling Silver");
             LoggerHandler.logInfo("Click On Sterling Silver");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"Could not click on Sterling Silver");
+            LoggerHandler.logError("Could not click on Sterling Silver");
         }
     }
     /*
@@ -145,10 +160,13 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnShowButton,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnShowButton);
-            test.log(Status.INFO,"Click on Show Products Button");
+            String str = Base.driver.getTitle();
+            AssertionUtility.verifyText(test,str,"Jewelry: Earrings, Bracelets, Necklaces, Rings | Swarovski");
+            test.log(Status.PASS,"Click on Show Products Button");
             LoggerHandler.logInfo("Click On Show Products Button");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL, "Could not Click On Show Products Button ");
+            LoggerHandler.logError("Could not Click On Show Products Button ");
         }
     }
     /*
@@ -162,10 +180,13 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnShowButton,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnShowButton);
-            test.log(Status.INFO,"Click on Show Products");
+            String str = Base.driver.getTitle();
+            AssertionUtility.verifyText(test,str,"Jewelry: Earrings, Bracelets, Necklaces, Rings | Swarovski");
+            test.log(Status.PASS,"Click on Show Products");
             LoggerHandler.logInfo("Click on Show Products");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"cannot Click on Show Products");
+            LoggerHandler.logError("cannot Click on Show Products");
         }
     }
     /*
@@ -181,10 +202,12 @@ public class SwarovskiDiamondsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnFirstRing,10);
             helper.clickOnElement(SwarovskiDiamondPageLocator.clickOnFirstRing);
-            test.log(Status.INFO,"Click on First Ring");
+            AssertionUtility.verifyText(test,Base.driver.getTitle(),"Eternity halo solitaire ring, Lab-grown diamonds 0.45 ct tw, Round shape, Sterling silver");
+            test.log(Status.PASS,"Click on First Ring");
             LoggerHandler.logInfo("Click On First Ring");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"cannot Click on First Ring");
+            LoggerHandler.logError("cannot Click On First Ring");
         }
     }
     /*
@@ -199,8 +222,11 @@ public class SwarovskiDiamondsPage {
             helper.waitForElementToBeVisible(SwarovskiDiamondPageLocator.clickOnEternity,10);
             String str=helper.getText(SwarovskiDiamondPageLocator.checkSizeText);
             AssertionUtility.verifyText(test, str, "Select size");
+            test.log(Status.PASS,"Click on First Ring");
+            LoggerHandler.logInfo("Click On First Ring");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"Click on First Ring");
+            LoggerHandler.logError("Click On First Ring");
         }
     }
 
