@@ -86,8 +86,7 @@ public class EarringsHomePage {
     public void sendData() {
         try {
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnsearchBar, 5);
-            helper.sendData(SwarovskiHomePageLocators.clickOnsearchBar, ExcelReader.readExcelData(
-                    "/home/coder/project/workspace/Project/testdata/SwarovskiExcelSheet.xlsx", "Sheet1", 0, 0));
+            helper.sendData(SwarovskiHomePageLocators.clickOnsearchBar, "Earrings");
             test.log(Status.INFO, "Senddata to searchBar as Earrings");
             LoggerHandler.logInfo("Sentdata to searchBar as Earrings");
         } catch (Exception e) {
