@@ -53,6 +53,10 @@ private void clickOnImber(){
         LoggerHandler.logError("Can not Click on Imber");
     }
 }
+private void verifyURLforImber(){
+    String url= Base.driver.getCurrentUrl();
+    AssertionUtility.verifyCondition(test, url, "Imber");
+}
 /*
 * a.Method Name: clickOnCategories.
 * b.Author Name: Md Safiur Rahaman
@@ -136,6 +140,10 @@ private void clickOnFirstWatchProduct(){
         LoggerHandler.logError("Can not Click on FirstWatchProduct");
     }
 }
+private void verifyURLforImberWatch(){
+    String url= Base.driver.getCurrentUrl();
+    AssertionUtility.verifyCondition(test, url, "Imber Watch");
+}
 /*
 * a.Method Name: clickOnAddToBag.
 * b.Author Name: Md Safiur Rahaman
@@ -167,11 +175,13 @@ private void clickOnAddToBag(){
 public void testWatches(){
     hoverOverWatches();
     clickOnImber();
+    verifyURLforImber();
     clickOnCategories();
     clickOnClose();
     clickOnWishList();
     verifyResult();
     clickOnFirstWatchProduct();
+    verifyURLforImberWatch();
     clickOnAddToBag();
 }
 

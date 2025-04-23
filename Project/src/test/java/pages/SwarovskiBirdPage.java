@@ -92,6 +92,7 @@ public class SwarovskiBirdPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnMetal, 10);
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnMetal);
+           
             LoggerHandler.logInfo("click On Metal");
             test.log(Status.PASS, "click On Metal");
         }
@@ -112,6 +113,8 @@ public class SwarovskiBirdPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnResults, 10);
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnResults);
+            String data=Base.driver.getCurrentUrl();
+            Assert.assertTrue(data.contains("Nature-inspired"));
             LoggerHandler.logInfo("click On Resuuts");
             test.log(Status.PASS, "click On Results");
            
@@ -133,6 +136,8 @@ public class SwarovskiBirdPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnFirstProduct, 10);
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnFirstProduct);
+            String data=Base.driver.getTitle();
+            Assert.assertTrue(data.contains("Sugarbird"));
             LoggerHandler.logInfo("click On FirstProduct");
             test.log(Status.PASS, "click On First Product");
         }
@@ -152,6 +157,8 @@ public class SwarovskiBirdPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiBirdPageLocators.clickOnFindinstore, 10);
             helper.clickOnElement(SwarovskiBirdPageLocators.clickOnFindinstore);
+            String data=Base.driver.getCurrentUrl();
+            Assert.assertTrue(data.contains("Sugarbird"));
             LoggerHandler.logInfo("click On FindInstore");
             test.log(Status.PASS, "click On  FindInstore");
         }

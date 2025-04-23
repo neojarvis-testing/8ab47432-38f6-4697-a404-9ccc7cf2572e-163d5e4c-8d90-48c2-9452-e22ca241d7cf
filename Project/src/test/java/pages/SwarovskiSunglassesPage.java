@@ -118,6 +118,8 @@ public class SwarovskiSunglassesPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnShowProducts, 10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnShowProducts);
+            String url=Base.driver.getCurrentUrl();
+            Assert.assertTrue(url.contains("material-acetate"));
             LoggerHandler.logInfo("click On ShowProducts");
             test.log(Status.PASS, "click OnShowProducts");
         }
@@ -138,6 +140,8 @@ public class SwarovskiSunglassesPage {
         try{
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnFirstProduct, 10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnFirstProduct);
+            String title=Base.driver.getTitle();
+            Assert.assertTrue(title.contains("Sunglasses"));
             LoggerHandler.logInfo("click On FirstProduct");
             test.log(Status.PASS, "click On FirstProduct");
         }

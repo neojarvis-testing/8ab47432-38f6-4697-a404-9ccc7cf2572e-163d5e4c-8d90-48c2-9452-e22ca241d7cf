@@ -46,6 +46,7 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void clickOnWeddingGifts(){
+
        try {
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnWeddingGifts,10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnWeddingGifts);
@@ -55,6 +56,7 @@ public class SwarovskiGiftsPage {
        } catch (Exception e) {
             test.log(Status.FAIL, "could not Click on Wedding Gifts");
             LoggerHandler.logError("could not Click on Wedding Gifts");
+
        }
     }
     /*
