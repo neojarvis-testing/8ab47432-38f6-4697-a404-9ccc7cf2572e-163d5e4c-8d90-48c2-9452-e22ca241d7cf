@@ -15,7 +15,7 @@ import utils.WebDriverHelper;
 
 public class FooterPage {
     public static WebDriverHelper helper;
-    public static ExtentTest test;
+    public ExtentTest test;
     public FooterPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test=test;

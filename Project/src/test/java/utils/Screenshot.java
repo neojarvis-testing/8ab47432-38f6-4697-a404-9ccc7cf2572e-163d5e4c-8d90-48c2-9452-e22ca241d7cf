@@ -65,7 +65,6 @@ public class Screenshot extends Base {
             if (!screenshotsDir.exists()) {
                 screenshotsDir.mkdirs();
             }
-            String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             File target = new File(screenshotsDir, filename + ".png");
 
             ImageIO.write(img, "png", target);
