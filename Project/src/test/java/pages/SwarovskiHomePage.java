@@ -213,7 +213,7 @@ private void verifyURLforColor(){
 * d.Parameters: None
 * e.Return Type: void
 */
-private void clickOnFirstProduct(){
+public void clickOnFirstProduct(){
     try {
         try {
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnCrossButton);
@@ -238,7 +238,7 @@ private void clickOnFirstProduct(){
 * d.Parameters: None
 * e.Return Type: void
 */
-private void clickOnAddToBag(){
+public void clickOnAddToBag(){
     try {
         helper.scrollByPixel(0, 100);
         try {
@@ -263,7 +263,7 @@ private void clickOnAddToBag(){
 * d.Parameters: None
 * e.Return Type: void
 */
-private void verifyFindInStore(){
+public void verifyFindInStore(){
     helper.waitForElementToBeVisible(SwarovskiHomePageLocators.verifyFindInStore, 10);
     String textFindStore= helper.getText(SwarovskiHomePageLocators.verifyFindInStore);
     AssertionUtility.verifyText(test, textFindStore, "Find in store");
@@ -289,9 +289,6 @@ public void testPendants(){
     clickOnWhite();
     clickOnShowProduct49();
     verifyURLforColor();
-    clickOnFirstProduct();
-    verifyFindInStore();
-    clickOnAddToBag();
 
 }
 

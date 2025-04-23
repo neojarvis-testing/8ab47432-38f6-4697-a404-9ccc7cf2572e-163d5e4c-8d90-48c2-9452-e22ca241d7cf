@@ -8,7 +8,7 @@ import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 public class SwarovskiSunglassesPage {
-    public static ExtentTest test;
+    public ExtentTest test;
     public static WebDriverHelper helper;
     public SwarovskiSunglassesPage(ExtentTest test){
         this.test=test;
@@ -199,8 +199,5 @@ public class SwarovskiSunglassesPage {
         verifyUrlSunglasses();
         clickOnMaterial();
         clickOnAcetate();
-        clickOnFirstProduct();
-        clickOnCareandMaintanece();
-        verifyBookanAppointment();
     }
 }

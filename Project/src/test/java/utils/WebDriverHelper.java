@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverHelper {
-    public static WebDriver driver;
+    public WebDriver driver;
     String home;
     public WebDriverHelper(WebDriver driver) {
         this.driver = driver;
@@ -110,6 +110,15 @@ public class WebDriverHelper {
             Actions action = new Actions(driver);
             WebElement element = driver.findElement(path);
             action.moveToElement(element).build().perform();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void mouseClick(By path) {
+        try {
+            Actions action = new Actions(driver);
+            WebElement element = driver.findElement(path);
+            action.click(element).build().perform();
         } catch (Exception e) {
             e.printStackTrace();
         }

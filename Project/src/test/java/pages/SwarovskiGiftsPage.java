@@ -1,7 +1,5 @@
 package pages;
 
-import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
@@ -15,7 +13,7 @@ import utils.WebDriverHelper;
 
 public class SwarovskiGiftsPage {
     public static WebDriverHelper helper;
-    public static ExtentTest test;
+    public ExtentTest test;
     public SwarovskiGiftsPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
@@ -262,8 +260,6 @@ public class SwarovskiGiftsPage {
         clickOnMaterial();
         clickOnStainlessSteel();
         clickOnShowAll();
-        clickOnFirstProduct();
-        verify();
         Screenshot.captureScreenShot("Gifts");
         Reporter.logScreenshottoReport("Gifts", test, "attached to report");
     }

@@ -12,7 +12,7 @@ import pages.FooterPage;
 import pages.SwarovskiAboutUsPage;
 import utils.Base;
 import utils.Reporter;
-
+import utils.SendEmailWithAttachment;
 import pages.SwarovskiDiamondsPage;
 import pages.SwarovskiGiftsPage;
 import pages.SwarovskiHomePage;
@@ -29,7 +29,7 @@ public class TestSwarovski extends Base {
     
     @BeforeClass
     public void generate(){
-        report = Reporter.createExtentReport("Swarovski Test");
+        report = Reporter.createExtentReport("Swarovski_Test");
     }
     @BeforeMethod
     public void open(){
@@ -161,8 +161,12 @@ public void testFooter() {
     }
 
     @AfterClass
-    public void flushi() {
+    public void Flush() {
         report.flush();
+        try {
+            SendEmailWithAttachment.sendEmailWithAttachment();
+        } catch (Exception e) {
+        }
     }
 
 }

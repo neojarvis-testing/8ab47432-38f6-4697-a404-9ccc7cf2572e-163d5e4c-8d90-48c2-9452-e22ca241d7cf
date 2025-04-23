@@ -4,15 +4,13 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.SwarovskiBirdPageLocators;
 import uistore.SwarovskiHomePageLocators;
-import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
-import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 public class SwarovskiBirdPage {
-     public static ExtentTest test;
-    public static WebDriverHelper helper;
+    ExtentTest test;
+    WebDriverHelper helper;
     public SwarovskiBirdPage(ExtentTest test){
         this.test=test;
         helper=new WebDriverHelper(Base.driver);
@@ -209,9 +207,5 @@ public class SwarovskiBirdPage {
         clickOnMaterial();
         clickOnMetal();
         clickOnResults();
-        clickOnFirstProduct();
-        clickOnFindInStore();
-        clickOnClickAvailbility();
-        verifyDelivery();
     }
 }

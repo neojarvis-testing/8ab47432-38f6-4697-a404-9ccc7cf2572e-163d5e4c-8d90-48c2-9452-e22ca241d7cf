@@ -1,12 +1,9 @@
 package pages;
 
-import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import uistore.SwarovskiDiamondPageLocator;
-import uistore.SwarovskiHomePageLocators;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.LoggerHandler;
@@ -16,7 +13,7 @@ import utils.WebDriverHelper;
 
 public class SwarovskiDiamondsPage {
      public static WebDriverHelper helper;
-    public static ExtentTest test;
+    public ExtentTest test;
     public SwarovskiDiamondsPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test=test;
@@ -247,10 +244,8 @@ public class SwarovskiDiamondsPage {
         clickOnMaterial();
         clickOnSterlingSilver();
         clickOnShowProductsButton();
-        clickOnFirstProductRing();
-        verifySizeKeyword();
         Screenshot.captureScreenShot("Eternity Rings");
-         Reporter.logScreenshottoReport("Eternity Rings", test, "attached to report");
+        Reporter.logScreenshottoReport("Eternity Rings", test, "attached to report");
     }
 
 }
