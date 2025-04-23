@@ -28,10 +28,15 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void hoverOverGifts(){
-        helper.waitForElementToBeVisible(SwarovskiHomePageLocators.hoverOnGifts,10);
-        helper.hoverElement(SwarovskiHomePageLocators.hoverOnGifts);
-        test.log(Status.INFO,"Hover on Gifts");
-        LoggerHandler.logInfo("Hover on Gifts");
+        try {
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.hoverOnGifts,10);
+            helper.hoverElement(SwarovskiHomePageLocators.hoverOnGifts);
+            test.log(Status.PASS,"Hover on Gifts");
+            LoggerHandler.logInfo("Hover on Gifts");
+        } catch (Exception e) {
+            test.log(Status.FAIL,"Cannot Hover on Gifts");
+            LoggerHandler.logError("Cannot Hover on Gifts");
+        }
     }
     /*
      * Method Name: clickOnWeddingGifts
@@ -41,10 +46,18 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void clickOnWeddingGifts(){
-        helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnWeddingGifts,10);
-        helper.clickOnElement(SwarovskiHomePageLocators.clickOnWeddingGifts);
-        test.log(Status.INFO, "Click on Wedding Gifts");
-        LoggerHandler.logInfo("Click on Wedding Gifts");
+
+       try {
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnWeddingGifts,10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnWeddingGifts);
+            AssertionUtility.verifyText(test, Base.driver.getTitle(), "Wedding Gifts, Bridal Party Gifts & Gifts For The Bride | Swarovski");
+            test.log(Status.PASS, "Click on Wedding Gifts");
+            LoggerHandler.logInfo("Click on Wedding Gifts");
+       } catch (Exception e) {
+            test.log(Status.FAIL, "could not Click on Wedding Gifts");
+            LoggerHandler.logError("could not Click on Wedding Gifts");
+
+       }
     }
     /*
      * Method Name: verifyTitleText
@@ -57,9 +70,12 @@ public class SwarovskiGiftsPage {
         try {
             String str = Base.driver.getCurrentUrl();
             AssertionUtility.verifyCondition(test, str, "Categories");
+            test.log(Status.PASS, "Title text Verified");
+            LoggerHandler.logInfo("Title text Verified");
 
         } catch (AssertionError e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL, "Title text cannot be Verified");
+            LoggerHandler.logError("Title text cannot be Verified");
         }
     }
     /*
@@ -70,10 +86,15 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void clickOnCtaegories(){
-        helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCategories,10);
-        helper.clickOnElement(SwarovskiHomePageLocators.clickOnCategories);
-        test.log(Status.INFO, "Click on Categories");
-        LoggerHandler.logInfo("Click on Categories");
+        try {
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnCategories,10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnCategories);
+            test.log(Status.PASS, "Click on Categories");
+            LoggerHandler.logInfo("Click on Categories");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "could not Click on Categories");
+            LoggerHandler.logInfo("could not Click on Categories");
+        }
     }
     /*
      * Method Name: clickOnWatches
@@ -83,10 +104,15 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void clickOnWatches(){
-        helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnWatches,10);
-        helper.clickOnElement(SwarovskiHomePageLocators.clickOnWatches);
-        test.log(Status.INFO, "Click on Watches");
-        LoggerHandler.logInfo("Click on Watches");
+        try {
+            helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnWatches,10);
+            helper.clickOnElement(SwarovskiHomePageLocators.clickOnWatches);
+            test.log(Status.PASS, "Click on Watches");
+            LoggerHandler.logInfo("Click on Watches");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "could not Click on Watches");
+            LoggerHandler.logError("could not Click on Watches");
+        }
     }
     /*
      * Method Name: clickOnAllWatches
@@ -96,10 +122,15 @@ public class SwarovskiGiftsPage {
      * Return type: void
      */
     public void clickOnAllWatches(){
+       try {
         helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnAllWatches,10);
         helper.clickOnElement(SwarovskiHomePageLocators.clickOnAllWatches);
-        test.log(Status.INFO,"Click on all watches");
+        test.log(Status.PASS,"Click on all watches");
         LoggerHandler.logInfo("Click on all watches");
+       } catch (Exception e) {
+        test.log(Status.FAIL,"could not Click on all watches");
+        LoggerHandler.logInfo("could not Click on all watches");
+       }
     }
     /*
      * Method Name: clickOnShowProducts
@@ -112,10 +143,12 @@ public class SwarovskiGiftsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnShowAll,10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnShowAll);
+            AssertionUtility.verifyText(test,Base.driver.getTitle(),"Featured products | Swarovski");
             test.log(Status.INFO,"Click on Show Products");
             LoggerHandler.logInfo("Click on Show Products");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on Material");
+            LoggerHandler.logError("could not Click on Material");
         }
     }
     /*
@@ -129,10 +162,11 @@ public class SwarovskiGiftsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnMaterial,10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnMaterial);
-            test.log(Status.INFO,"Click on Material");
+            test.log(Status.PASS,"Click on Material");
             LoggerHandler.logInfo("Click on Material");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on Material");
+            LoggerHandler.logError("could not Click on Material");
         }
     }
     /*
@@ -146,10 +180,11 @@ public class SwarovskiGiftsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnStainlessSteel,10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnStainlessSteel);
-            test.log(Status.INFO,"Click on Material");
+            test.log(Status.PASS,"Click on Material");
             LoggerHandler.logInfo("Click on Material");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on Material");
+            LoggerHandler.logError("could not Click on Material");
         }
     }
     /*
@@ -163,10 +198,12 @@ public class SwarovskiGiftsPage {
         try {
             helper.waitForElementToBeVisible(SwarovskiHomePageLocators.clickOnShowAllButton,10);
             helper.clickOnElement(SwarovskiHomePageLocators.clickOnShowAllButton);
-            test.log(Status.INFO,"Click on Material");
-            LoggerHandler.logInfo("Click on Material");
+            AssertionUtility.verifyText(test,Base.driver.getTitle(),"Featured products | Swarovski");
+            test.log(Status.INFO,"Click on Show All Products");
+            LoggerHandler.logInfo("Click on Show All Products");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on Show All Products");
+            LoggerHandler.logError("could not Click on Show All Products");
         }
     }
     /*
@@ -183,7 +220,8 @@ public class SwarovskiGiftsPage {
             test.log(Status.INFO,"Click on First Product");
             LoggerHandler.logInfo("Click on First Product");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"could not Click on First Product");
+            LoggerHandler.logError("could not Click on First Product");
         }
     }
     /*
@@ -197,8 +235,11 @@ public class SwarovskiGiftsPage {
         try {
             String str = helper.getText(SwarovskiHomePageLocators.addToCartText);
             AssertionUtility.verifyText(test, str, "Add to bag");
+            test.log(Status.PASS,"Add To Bag Text Verified");
+            LoggerHandler.logInfo("Add To Bag Text Verified");
         } catch (AssertionError e) {
-            System.out.println(e.getMessage());
+            test.log(Status.FAIL,"Add To Bag Text cannot be Verified");
+            LoggerHandler.logError("Add To Bag Text cannot be Verified");
         }
     }
     

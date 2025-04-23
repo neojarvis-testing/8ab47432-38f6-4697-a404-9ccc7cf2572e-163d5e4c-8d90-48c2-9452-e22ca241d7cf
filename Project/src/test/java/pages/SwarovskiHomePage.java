@@ -131,6 +131,10 @@ private void clickOnShowProduct(){
         LoggerHandler.logError("Click on ShowProduct");
     }
 }
+private void verifyURLforCrystal(){
+    String url= Base.driver.getCurrentUrl();
+    AssertionUtility.verifyCondition(test, url, "Crystal");
+}
 
 /*
 * a.Method Name: clickOnColor.
@@ -195,6 +199,11 @@ private void clickOnShowProduct49(){
         test.log(Status.FAIL, "Click on ShowProduct based on color");
         LoggerHandler.logError("Click on ShowProduct based on color");
     }
+}
+
+private void verifyURLforColor(){
+    String url= Base.driver.getCurrentUrl();
+    AssertionUtility.verifyCondition(test, url, "Color");
 }
 
 /*
@@ -275,12 +284,14 @@ public void testPendants(){
     clickOnMeterial();
     clickOnCrystal();
     clickOnShowProduct();
+    verifyURLforCrystal();
     clickOnColor();
     clickOnWhite();
     clickOnShowProduct49();
-    // clickOnFirstProduct();
-    // verifyFindInStore();
-    // clickOnAddToBag();
+    verifyURLforColor();
+    clickOnFirstProduct();
+    verifyFindInStore();
+    clickOnAddToBag();
 
 }
 
