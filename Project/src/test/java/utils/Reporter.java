@@ -8,6 +8,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.io.Files;
 public class Reporter extends Base {
     public static TakesScreenshot ts;
@@ -24,6 +25,8 @@ public class Reporter extends Base {
     public static ExtentReports createExtentReport(String reportName) {
         report = new ExtentReports();
         sparkReporter = new ExtentSparkReporter(new File(System.getProperty("user.dir") + "/reports/" + reportName + ".html"));
+        sparkReporter.config().setDocumentTitle("Swarovski_Automation_Report");
+        sparkReporter.config().setTheme(Theme.DARK);
         report.attachReporter(sparkReporter);
         return report;
     }
