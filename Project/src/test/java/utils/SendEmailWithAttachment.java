@@ -80,7 +80,7 @@ public class SendEmailWithAttachment {
 	            Transport.send(message);
 	            System.out.println("Email sent successfully!");
 	        } catch (Exception e) {
-	            e.printStackTrace();
+				LoggerHandler.logError(e.getMessage());
 	        }
 	    }
 }

@@ -34,7 +34,7 @@ public class WebDriverHelper {
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
                     .until(ExpectedConditions.visibilityOfElementLocated(path));
         } catch (Exception e) {
-            e.printStackTrace();
+           LoggerHandler.logError(e.getMessage());
         }
     }
      /*
@@ -49,7 +49,7 @@ public class WebDriverHelper {
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
                     .until(ExpectedConditions.elementToBeClickable(path));
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 
@@ -64,7 +64,7 @@ public class WebDriverHelper {
         try {
             driver.findElement(path).click();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 
@@ -79,7 +79,7 @@ public class WebDriverHelper {
         try {
             driver.findElement(path).sendKeys(value);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 
@@ -94,7 +94,7 @@ public class WebDriverHelper {
         try {
             driver.findElement(path).sendKeys(Keys.ENTER);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 
@@ -111,7 +111,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(path);
             action.moveToElement(element).build().perform();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
     public void mouseClick(By path) {
@@ -120,7 +120,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(path);
             action.click(element).build().perform();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 
@@ -137,7 +137,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(path);
             action.click(element).build().perform();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 
@@ -160,7 +160,7 @@ public class WebDriverHelper {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 

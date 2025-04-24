@@ -30,7 +30,7 @@ public class Base {
             prop.load(file);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
 
         }
     }
@@ -40,8 +40,7 @@ public class Base {
         try {
             loadProperties();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
         String executionType = prop.getProperty("executiontype");
         String browserName = prop.getProperty("browser");
@@ -53,7 +52,7 @@ public class Base {
                 driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
             } catch (MalformedURLException e) {
 
-                e.printStackTrace();
+                LoggerHandler.logError(e.getMessage());
             }
 
         } else if ("local".equalsIgnoreCase(executionType)) {

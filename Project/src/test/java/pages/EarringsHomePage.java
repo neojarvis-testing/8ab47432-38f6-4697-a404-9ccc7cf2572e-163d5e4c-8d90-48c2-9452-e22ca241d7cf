@@ -8,13 +8,12 @@ import com.aventstack.extentreports.Status;
 import uistore.EarringsHomePageLocator;
 import uistore.SwarovskiHomePageLocators;
 import utils.Base;
-import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class EarringsHomePage {
-    public static WebDriverHelper helper;
+    WebDriverHelper helper;
     ExtentTest test;
 
     public EarringsHomePage(ExtentTest test) {
@@ -32,7 +31,7 @@ public class EarringsHomePage {
     try {
         Screenshot.captureScreenShot("Logo Screenshot");
     } catch (Exception e) {
-       e.printStackTrace(); 
+        LoggerHandler.logError(e.getMessage()); 
     }
     }
     /*
@@ -50,7 +49,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on Search Icon");
             LoggerHandler.logInfo("Clicked on Search Icon");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "couldnot click on Search Icon");
             LoggerHandler.logError("couldnot click on Search Icon");
         }
@@ -70,7 +69,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "click on Search Bar");
             LoggerHandler.logInfo("click on Search Bar");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "couldnot click on Search Bar");
             LoggerHandler.logError("couldnot click on Search Bar");
         }
@@ -90,7 +89,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Senddata to searchBar as Earrings");
             LoggerHandler.logInfo("Sentdata to searchBar as Earrings");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "couldnot Senddata to searchBar as Earrings");
             LoggerHandler.logError("couldnot Senddata to searchBar as Earrings");
         }
@@ -110,7 +109,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "click enter for resultant page");
             LoggerHandler.logInfo("clicked enter for resultant page");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "couldnot click enter");
             LoggerHandler.logError("couldnot click enter");
         }
@@ -130,7 +129,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on Material");
             LoggerHandler.logInfo("Clicked on Material");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "couldnot click on Material");
             LoggerHandler.logError("couldnot click on Material");
         }
@@ -150,7 +149,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on Gemstore");
             LoggerHandler.logInfo("Clicked on Gemstore");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "Couldnot Click on Gemstore");
             LoggerHandler.logError("Couldnot Click on Gemstore");
         }
@@ -170,7 +169,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on Zircoina");
             LoggerHandler.logInfo("Clicked on Zircoina");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "Couldnot Click on Zircoina");
             LoggerHandler.logError("Couldnot Click on Zircoina");
         }
@@ -190,7 +189,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on Showproduct");
             LoggerHandler.logInfo("Clicked on Showproduct");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "Couldnot Click on Showproduct");
             LoggerHandler.logError("Couldnot Click on Showproduct");
         }
@@ -210,7 +209,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on Firstproduct");
             LoggerHandler.logInfo("Clicked on Firstproduct");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "Couldnot click on Firstproduct");
             LoggerHandler.logError("Couldnot click on Firstproduct");
         }
@@ -230,7 +229,7 @@ public class EarringsHomePage {
             test.log(Status.INFO, "Click on BookAppointment");
             LoggerHandler.logInfo("Clicked on BookAppointment");
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             test.log(Status.FAIL, "Couldnot click on BookAppointment");
             LoggerHandler.logError("Couldnot click on BookAppointment");
         }

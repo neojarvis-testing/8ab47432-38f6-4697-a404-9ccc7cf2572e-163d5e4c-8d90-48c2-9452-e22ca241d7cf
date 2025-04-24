@@ -48,7 +48,7 @@ public class Reporter extends Base {
             return destPath;
 
         } catch (IOException e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
         }
         return "";
     }
@@ -63,7 +63,7 @@ public class Reporter extends Base {
         try {
             test.log(Status.INFO, description, MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot(filename)).build());
         } catch (Exception e) {
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
         }
     }
 }

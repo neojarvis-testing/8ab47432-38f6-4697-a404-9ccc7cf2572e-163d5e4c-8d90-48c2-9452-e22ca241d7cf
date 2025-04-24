@@ -36,7 +36,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
     /*
@@ -72,7 +72,7 @@ public class Screenshot extends Base {
             js.executeScript("arguments[0].style.backgroundColor='';", element);
  
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
     /*
@@ -95,7 +95,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file,target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
         }
     }
 }

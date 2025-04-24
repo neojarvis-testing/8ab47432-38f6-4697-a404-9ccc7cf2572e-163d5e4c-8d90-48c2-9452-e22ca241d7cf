@@ -8,8 +8,8 @@ import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 public class SwarovskiSunglassesPage {
-    public ExtentTest test;
-    public static WebDriverHelper helper;
+    ExtentTest test;
+    WebDriverHelper helper;
     public SwarovskiSunglassesPage(ExtentTest test){
         this.test=test;
         helper=new WebDriverHelper(Base.driver);
@@ -29,7 +29,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "Hover on Accessories");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not hover on Accessories");
             test.log(Status.FAIL,"not hover on Accessories");
         }   
@@ -49,7 +49,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "clickOnSunglasses");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not clickOnSunglasses");
             test.log(Status.FAIL,"not clickOnSunglasses");
         }
@@ -82,7 +82,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "clickOnMaterial");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On Material");
             test.log(Status.FAIL,"not click On Material");
         }
@@ -102,7 +102,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "click On Acetate");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On Acetate");
             test.log(Status.FAIL,"not click On Acetate");
         }
@@ -124,7 +124,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "click OnShowProducts");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On ShowProducts");
             test.log(Status.FAIL,"not click On ShowProducts");
         }
@@ -146,7 +146,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "click On FirstProduct");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On FirstProduct");
             test.log(Status.FAIL,"not click On FirstProduct");
         }
@@ -166,7 +166,7 @@ public class SwarovskiSunglassesPage {
             test.log(Status.PASS, "click On CareandMaintainence");
         }
         catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On FirstProduct");
             test.log(Status.FAIL,"not click On FirstProduct");
         }

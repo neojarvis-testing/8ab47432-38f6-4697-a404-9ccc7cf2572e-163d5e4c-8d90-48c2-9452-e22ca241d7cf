@@ -12,8 +12,8 @@ import utils.WebDriverHelper;
 
 public class SwarovskiHomePage {
 
-public ExtentTest test;
-public static WebDriverHelper helper= new WebDriverHelper(Base.driver);
+ExtentTest test;
+WebDriverHelper helper= new WebDriverHelper(Base.driver);
 public SwarovskiHomePage(ExtentTest test){
     this.test=test;
 }
