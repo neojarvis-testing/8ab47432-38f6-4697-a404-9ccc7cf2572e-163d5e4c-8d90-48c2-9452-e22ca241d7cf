@@ -30,7 +30,7 @@ public class SwarovskiBirdPage {
             test.log(Status.PASS, "hover on Decorations");
         }
         catch(Exception e){
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not hover on  Decorations");
             test.log(Status.FAIL,"not hover on Decorations");
         }   
@@ -53,7 +53,7 @@ public class SwarovskiBirdPage {
 
         }
         catch(Exception e){
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On Birds");
             test.log(Status.FAIL,"not click On Birds");
         }
@@ -74,7 +74,7 @@ public class SwarovskiBirdPage {
             test.log(Status.PASS, "click On Material");
         }
         catch(Exception e){
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On Material");
             test.log(Status.FAIL,"not click On Material");
         }
@@ -95,7 +95,7 @@ public class SwarovskiBirdPage {
             test.log(Status.PASS, "click On Metal");
         }
         catch(Exception e){
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On Metal");
             test.log(Status.FAIL,"not click On Metal");
         }
@@ -118,7 +118,7 @@ public class SwarovskiBirdPage {
            
         }
         catch(Exception e){
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On Results");
             test.log(Status.FAIL,"not click OnclickOnBirds");
         }
@@ -182,7 +182,7 @@ public class SwarovskiBirdPage {
             Screenshot.captureScreenShot("clickeResult");
         }
         catch(Exception e){
-            e.printStackTrace();
+             LoggerHandler.logError(e.getMessage());
             LoggerHandler.logError(" not click On clickOnBirds");
             test.log(Status.FAIL,"not click OnclickOnBirds");
         }

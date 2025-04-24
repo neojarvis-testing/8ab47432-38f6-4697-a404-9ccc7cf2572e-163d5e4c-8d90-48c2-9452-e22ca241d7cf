@@ -44,10 +44,10 @@ public class ExcelReader {
             return data;
         } 
         catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+             LoggerHandler.logError(e.getMessage());
         }
         catch(IOException e){
-            System.out.println(e.getMessage());
+             LoggerHandler.logError(e.getMessage());
         }
 
 
@@ -72,10 +72,10 @@ public class ExcelReader {
 	            return value;
 
 		} catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+             LoggerHandler.logError(e.getMessage());
 		}
 		catch (IOException e) {
-            System.out.println(e.getMessage());
+             LoggerHandler.logError(e.getMessage());
 		}
 		return null;
 	}

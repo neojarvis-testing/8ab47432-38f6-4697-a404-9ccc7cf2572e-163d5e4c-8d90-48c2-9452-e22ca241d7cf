@@ -12,7 +12,7 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class HomePageFooter {
-     public static WebDriverHelper helper;
+    WebDriverHelper helper;
     ExtentTest test;
     public HomePageFooter(ExtentTest test){
         this.test=test;
